@@ -51,7 +51,7 @@
 </script>
 
 <div class="api-key-section">
-	<button on:click={() => (showApiKeyInput = !showApiKeyInput)} class="api-key-toggle-button">
+	<button onclick={() => (showApiKeyInput = !showApiKeyInput)} class="api-key-toggle-button">
 		API Key
 	</button>
 	{#if showApiKeyInput}
@@ -60,7 +60,7 @@
 			placeholder="API Key"
 			bind:value={$apiKey}
 			class="api-key-input"
-			on:blur={handleBlur}
+			onblur={handleBlur}
 		/>
 		{#if isLoading}
 			<div class="validity-indicator spinner"></div>

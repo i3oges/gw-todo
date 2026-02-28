@@ -55,10 +55,6 @@
 		text-decoration: line-through;
 	}
 
-	.checked .text-blue-400 {
-		color: #888; /* Ensure waypoint also greys out */
-	}
-
 	/* Minimal custom styles, relying on Tailwind for most */
 	input[type='checkbox'] {
 		margin-right: 0.5rem;
