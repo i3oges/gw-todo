@@ -1,0 +1,30 @@
+:root {
+  --background-color: #1a1a1a;
+  --text-color: #f0f0f0;
+  --primary-color: #bb86fc;
+  --secondary-color: #03dac6;
+  --surface-color: #2c2c2c;
+  --header-color: #242424;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--primary-color);
+}
+
+a {
+  color: var(--secondary-color);
+}
+
+header {
+  background-color: var(--header-color);
+  border-bottom: 1px solid var(--surface-color);
+}
+
+.race-item.checked {
+  color: #555;
+}
