@@ -1,14 +1,15 @@
 <script lang="ts">
-	import CopyToClipboard from '$lib/CopyToClipboard.svelte';
+	import Gw2Link from '$lib/Gw2Link.svelte';
 	import type { PageProps } from './$types';
+	import { checkedRacesStore } from '$lib/stores/checkedRacesStore';
 
 	let { data }: PageProps = $props();
 
-	let checkedRaces = $state<Record<string, boolean>>({});
-
 	function handleCheckboxChange(id: string) {
-		checkedRaces[id] = !checkedRaces[id];
-		checkedRaces = { ...checkedRaces }; // Reassign to trigger reactivity
+		checkedRacesStore.update((store) => {
+			store[id] = !store[id];
+			return store;
+		});
 	}
 </script>
 
@@ -27,21 +28,19 @@
 			{#each data.races as race}
 				<div
 					class="flex items-center justify-between rounded-lg border border-slate-700 bg-slate-800/50 p-3 transition-colors hover:border-slate-500"
-					class:checked={checkedRaces[race.id]}
+					class:checked={$checkedRacesStore[race.id]}
 				>
 					<div class="flex items-center gap-3">
 						<input
 							type="checkbox"
 							id={race.id}
-							checked={checkedRaces[race.id]}
+							checked={$checkedRacesStore[race.id]}
 							onchange={() => handleCheckboxChange(race.id)}
 							class="h-5 w-5 rounded border-gray-300 text-purple-600 focus:ring-purple-500"
 						/>
 						<label for={race.id} class="text-sm font-medium text-slate-200">{race.name}</label>
 					</div>
-					<CopyToClipboard>
-						<span class="cursor-pointer font-mono text-blue-400">{race.waypoint}</span>
-					</CopyToClipboard>
+					<Gw2Link link={race.waypoint} />
 				</div>
 			{/each}
 		</div>
