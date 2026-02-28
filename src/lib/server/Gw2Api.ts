@@ -36,7 +36,6 @@ const fetchGw2 = async <T extends z.ZodType>(
 	const json = await response.json();
 	const parseResult = schema.safeParse(json);
 	if (!parseResult.success) throw new Error('could not parse', parseResult.error);
-	console.log({ parseResult });
 	return parseResult.data;
 };
 

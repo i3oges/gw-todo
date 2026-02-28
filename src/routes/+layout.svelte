@@ -3,14 +3,15 @@
 	import favicon from '$lib/assets/favicon.svg';
 	import { theme } from '$lib/stores/theme';
 	import ThemeToggle from '$lib/ThemeToggle.svelte';
-	import { page } from '$app/stores';
+	import ApiKeyInput from '$lib/ApiKeyInput.svelte';
+	import { page } from '$app/stores'; // Changed from $app/state
 
 	let { children } = $props();
 </script>
 
 <svelte:head>
 	<link rel="icon" href={favicon} />
-	<link href="https://fonts.googleapis.com/css2?family=Cagliostro&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Cagliostro&display=swap" rel="stylesheet" />
 	<title>GW TODO</title>
 	{#if $theme === 'dark'}
 		<link rel="stylesheet" href="/styles/dark.css" />
@@ -22,13 +23,26 @@
 <div data-theme={$theme}>
 	<header>
 		<nav>
-			<div class="banner">GW TODO</div>
+			<div class="banner"><a href="/" class:active={$page.url.pathname === '/'}>GW TODO</a></div>
 			<ul>
-				<li><a href="/" class:active={$page.url.pathname === '/'}>Home</a></li>
-				<li><a href="/achievements" class:active={$page.url.pathname.startsWith('/achievements')}>Achievements</a></li>
-				<li><a href="/wallet" class:active={$page.url.pathname.startsWith('/wallet')}>Wallet</a></li>
+				<li>
+					<a
+						href="/faction-provisioner"
+						class:active={$page.url.pathname.startsWith('/faction-provisioner')}
+						>Faction Provisioner</a
+					>
+				</li>
+				<li>
+					<a href="/achievements" class:active={$page.url.pathname.startsWith('/achievements')}
+						>Achievements</a
+					>
+				</li>
+				<li>
+					<a href="/wallet" class:active={$page.url.pathname.startsWith('/wallet')}>Wallet</a>
+				</li>
 				<li><a href="/races" class:active={$page.url.pathname.startsWith('/races')}>Races</a></li>
 			</ul>
+			<ApiKeyInput />
 			<ThemeToggle />
 		</nav>
 	</header>
@@ -57,6 +71,7 @@
 		padding: 1rem;
 		background-color: var(--header-color);
 		border-bottom: 1px solid var(--surface-color);
+		gap: 1rem; /* Added gap for spacing */
 	}
 
 	nav ul {
@@ -65,6 +80,7 @@
 		padding: 0;
 		display: flex;
 		gap: 1rem;
+		flex-grow: 1;
 	}
 
 	nav a {

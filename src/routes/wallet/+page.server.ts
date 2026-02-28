@@ -1,7 +1,7 @@
 import { getAccountWallet } from '$lib/server/Gw2Api';
-import type { PageLoad } from '../$types';
+import type { PageServerLoad } from './$types';
 
-export const load: PageLoad = async () => {
+export const load: PageServerLoad = async () => {
 	const wallet = await getAccountWallet();
 	return { wallet };
 };
