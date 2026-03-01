@@ -4,7 +4,7 @@
 	import { theme } from '$lib/stores/theme';
 	import ThemeToggle from '$lib/ThemeToggle.svelte';
 	import ApiKeyInput from '$lib/ApiKeyInput.svelte';
-	import { page } from '$app/stores'; // Changed from $app/state
+	import { page, navigating } from '$app/state';
 
 	let { children } = $props();
 </script>
@@ -23,27 +23,30 @@
 <div data-theme={$theme}>
 	<header>
 		<nav>
-			<div class="banner"><a href="/" class:active={$page.url.pathname === '/'}>GW TODO</a></div>
+			<div class="banner"><a href="/" class:active={page.url.pathname === '/'}>GW TODO</a></div>
 			<ul>
 				<li>
 					<a
 						href="/faction-provisioner"
-						class:active={$page.url.pathname.startsWith('/faction-provisioner')}
+						class:active={page.url.pathname.startsWith('/faction-provisioner')}
 						>Faction Provisioner</a
 					>
 				</li>
 				<li>
-					<a href="/achievements" class:active={$page.url.pathname.startsWith('/achievements')}
+					<a href="/achievements" class:active={page.url.pathname.startsWith('/achievements')}
 						>Achievements</a
 					>
 				</li>
 				<li>
-					<a href="/wallet" class:active={$page.url.pathname.startsWith('/wallet')}>Wallet</a>
+					<a href="/wallet" class:active={page.url.pathname.startsWith('/wallet')}>Wallet</a>
 				</li>
-				<li><a href="/races" class:active={$page.url.pathname.startsWith('/races')}>Races</a></li>
+				<li><a href="/races" class:active={page.url.pathname.startsWith('/races')}>Races</a></li>
 			</ul>
 			<ApiKeyInput />
 			<ThemeToggle />
+			{#if navigating.to}
+				<div class="loading-bar"></div>
+			{/if}
 		</nav>
 	</header>
 
@@ -65,6 +68,7 @@
 	}
 
 	nav {
+		position: relative; /* Needed for absolute positioning of loading bar */
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
@@ -96,6 +100,29 @@
 		text-decoration: underline;
 		text-decoration-color: var(--primary-color);
 		text-underline-offset: 4px;
+	}
+
+	.loading-bar {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 3px;
+		background-color: var(--secondary-color); /* A vibrant color for the loading bar */
+		transform-origin: left;
+		animation: loading-progress 2s infinite linear;
+	}
+
+	@keyframes loading-progress {
+		0% {
+			transform: scaleX(0);
+		}
+		50% {
+			transform: scaleX(0.7);
+		}
+		100% {
+			transform: scaleX(1);
+		}
 	}
 
 	main {
