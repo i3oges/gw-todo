@@ -4,18 +4,9 @@ import { error } from '@sveltejs/kit';
 
 export const prerender = false;
 
-export const load: PageServerLoad = async ({ request, cookies }) => {
-	let apiKey: string | undefined | null;
+export const load: PageServerLoad = async ({ cookies }) => {
+	const apiKey = cookies.get('apiKey');
 
-	const authorization = request.headers.get('Authorization');
-	if (authorization) {
-		apiKey = authorization.split(' ')[1];
-	}
-
-	if (!apiKey) {
-		apiKey = cookies.get('apiKey');
-	}
-	
 	if (!apiKey) {
 		error(401, 'API Key missing');
 	}

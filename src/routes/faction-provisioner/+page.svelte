@@ -4,6 +4,17 @@
 
 	// This prop is automatically populated by the load function
 	let { data }: PageProps = $props();
+	const diciplines = [
+		'Armorsmith',
+		'Artificer',
+		'Chef',
+		'Huntsman',
+		'Jeweler',
+		'Leatherworker',
+		'Scribe',
+		'Tailor',
+		'Weaponsmith'
+	];
 </script>
 
 <div
