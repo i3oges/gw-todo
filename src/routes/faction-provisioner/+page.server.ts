@@ -33,12 +33,15 @@ export const load: PageServerLoad = async ({ fetch }) => {
 					items: e.items.map((i) => {
 						const price = prices.find((p) => p.id === i.id);
 						const detail = items.find((item) => item.id === i.id);
+						if (!price || !detail) {
+							throw new Error(`Missing data for item ID ${i.id}`);
+						}
 						return {
 							...i,
-							name: detail?.name,
-							icon: detail?.icon,
-							buy_price: price?.buys.unit_price,
-							sell_price: price?.sells.unit_price
+							name: detail.name,
+							icon: detail.icon,
+							buy_price: price.buys.unit_price,
+							sell_price: price.sells.unit_price
 						};
 					})
 				};
