@@ -1,6 +1,7 @@
 :root {
   --background-color: #1a1a1a;
   --text-color: #f0f0f0;
+  --secondary-text-color: #1a1a1a;
   --primary-color: #7d59aa;
   --secondary-color: #03dac6;
   --surface-color: #2c2c2c;
@@ -16,9 +17,6 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--primary-color);
 }
 
-a {
-  color: var(--secondary-color);
-}
 
 header {
   background-color: var(--header-color);

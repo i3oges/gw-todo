@@ -157,7 +157,7 @@
 
 	<div class="flex flex-col gap-2 overflow-hidden rounded-lg border-slate-700">
 		{#each exchanges as item, i}
-			<div>{item.name} {item.location} <Gw2Link link={item.waypoint} /></div>
+			<div class="py-1">{item.name} {item.location} <Gw2Link link={item.waypoint} /></div>
 			<table class="w-full border-collapse border text-left">
 				<thead class="bg-slate-800">
 					<tr>
