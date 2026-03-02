@@ -23,7 +23,7 @@
 <div data-theme={$theme}>
 	<header>
 		<nav>
-			<div class="banner"><a href="/" class:active={page.url.pathname === '/'}>GW TODO</a></div>
+			<div class="banner"><a href="/" class:active={page.url.pathname === '/'}>GW TODOBOX</a></div>
 			<ul>
 				<li>
 					<a

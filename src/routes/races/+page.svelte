@@ -14,13 +14,21 @@
 </script>
 
 <div class="rounded-xl border border-slate-700 bg-slate-900 p-6 shadow-xl">
-	<div class="mb-6 flex flex-col items-start justify-between gap-4 md:flex-row md:items-center">
-		<div>
-			<h1 class="flex items-center gap-2 text-xl font-bold text-white">
-				<span class="text-yellow-500">🏁</span> Guild Wars 2 Griffon Races
-			</h1>
-			<p class="text-sm text-slate-400">Track your completed griffon races</p>
+	<div class="flex items-center justify-between">
+		<div class="mb-6 flex flex-col items-start justify-between gap-4 md:flex-row md:items-center">
+			<div>
+				<h1 class="flex items-center gap-2 text-xl font-bold text-white">
+					<span class="text-yellow-500">🏁</span> Guild Wars 2 Griffon Races
+				</h1>
+				<p class="text-sm text-slate-400">Track your completed griffon races</p>
+			</div>
 		</div>
+		<button
+			onclick={() => checkedRacesStore.set({})}
+			class="reset cursor-pointer rounded px-4 py-2 font-bold text-white"
+		>
+			Reset
+		</button>
 	</div>
 
 	{#if data.races}

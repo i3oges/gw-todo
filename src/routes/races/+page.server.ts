@@ -47,7 +47,7 @@ const GRIFFON_RACES = [
 	{
 		id: 'the_desolation_griffon_race_master',
 		name: 'The Desolation Griffon Race (Master)',
-		waypoint: '[&BKMKAAA=]'
+		waypoint: '[&BHcKAAA=]'
 	},
 	{
 		id: 'domain_of_vabbi_griffon_race_expert',
