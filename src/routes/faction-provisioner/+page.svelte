@@ -1,6 +1,7 @@
 <script lang="ts">
 	import Gw2Link from '$lib/Gw2Link.svelte';
 	import GWCPrice from '$lib/GWCPrice.svelte';
+	import { be } from 'zod/v4/locales';
 	import type { PageProps } from './$types';
 
 	// This prop is automatically populated by the load function
@@ -34,6 +35,7 @@
 
 	const selectedDiciplines = $state(diciplines.map((d) => d.dicipline));
 	const checkedItems = $state<Record<number, boolean>>({});
+	let bestBuy = $state<'buy_price' | 'sell_price'>('buy_price');
 	const exchanges = $derived(
 		data.provisionerItems.map((items) => {
 			return {
@@ -42,7 +44,7 @@
 					const item = exchange.items
 						.filter((i) => selectedDiciplines.includes(i.dicipline))
 						.toSorted((a, b) => {
-							return a.buy_price - b.buy_price;
+							return a[bestBuy] - b[bestBuy];
 						})
 						.at(0);
 					if (!item) {
@@ -101,6 +103,27 @@
 		<div class="flex flex-col items-center gap-2">
 			<a href={gw2EfficiencyLink} target="_blank" rel="noopener noreferrer">Open in Gw2Efficiency</a
 			>
+			<div class="flex gap-4">
+				Lowest Price By
+				<span>
+					<input
+						type="radio"
+						id="buy_price"
+						checked={bestBuy === 'buy_price'}
+						onchange={() => (bestBuy = 'buy_price')}
+					/>
+					<label for="buy_price">Buy Price</label>
+				</span>
+				<span>
+					<input
+						type="radio"
+						id="sell_price"
+						checked={bestBuy === 'sell_price'}
+						onchange={() => (bestBuy = 'sell_price')}
+					/>
+					<label for="sell_price">Sell Price</label>
+				</span>
+			</div>
 			<div class="flex items-center gap-6">
 				<div class="flex items-center gap-1">
 					<span class="text-sm text-slate-400">Total Buy Price:</span>
@@ -116,7 +139,7 @@
 			{#each diciplines as dicipline}
 				{@const selected = selectedDiciplines.includes(dicipline.dicipline)}
 				<button
-					class={`mr-2 mb-2 rounded border border-slate-600 bg-slate-800 px-3 py-1 text-sm text-slate-300 hover:bg-slate-700 ${selected ? 'ring-2 ring-blue-500' : ''}`}
+					class={` mr-2 mb-2 cursor-pointer rounded border border-slate-600 bg-slate-800 px-3 py-1 text-sm text-slate-300 hover:bg-slate-700 ${selected ? 'ring-2 ring-blue-500' : ''}`}
 					onclick={() => {
 						if (selectedDiciplines.includes(dicipline.dicipline)) {
 							if (selectedDiciplines.length === 1) return; // Prevent deselecting all
@@ -132,26 +155,20 @@
 		</div>
 	</div>
 
-	<div class="overflow-hidden rounded-lg border border-slate-700">
-		<table class="w-full border-collapse text-left">
-			<thead class="bg-slate-800">
-				<tr>
-					<th></th>
-					<th class="p-4 font-semibold text-slate-300">Exchange</th>
-					<th class="p-4 font-semibold text-slate-300">Item</th>
-					<th class="p-4 font-semibold text-slate-300">TP Price (Buy)</th>
-					<th class="p-4 font-semibold text-slate-300">TP Price (Sell)</th>
-				</tr>
-			</thead>
-			<tbody class="divide-y divide-slate-700 bg-slate-800/50">
-				{#each exchanges as item, i}
-					<tr class="min-h-4">
-						<td>{item.name}</td>
-						<td>{item.location}</td>
-						<td><Gw2Link link={item.waypoint} /></td>
-						<td></td>
-						<td></td>
+	<div class="flex flex-col gap-2 overflow-hidden rounded-lg border-slate-700">
+		{#each exchanges as item, i}
+			<div>{item.name} {item.location} <Gw2Link link={item.waypoint} /></div>
+			<table class="w-full border-collapse border text-left">
+				<thead class="bg-slate-800">
+					<tr>
+						<th></th>
+						<th class="p-4 font-semibold text-slate-300">Exchange</th>
+						<th class="p-4 font-semibold text-slate-300">Item</th>
+						<th class="p-4 font-semibold text-slate-300">TP Price (Buy)</th>
+						<th class="p-4 font-semibold text-slate-300">TP Price (Sell)</th>
 					</tr>
+				</thead>
+				<tbody class="divide-y divide-slate-700 bg-slate-800/50">
 					{#each item.exchanges as exchange, j}
 						<tr class={`transition-colors hover:bg-slate-700/50`}>
 							<td>
@@ -195,9 +212,9 @@
 							</td>
 						</tr>
 					{/each}
-				{/each}
-			</tbody>
-		</table>
+				</tbody>
+			</table>
+		{/each}
 	</div>
 
 	<div class="mt-4 text-xs text-slate-500 italic">Data refreshed on page load.</div>

@@ -22,6 +22,9 @@ export const POST: RequestHandler = async ({ request, cookies }) => {
 		const isValid = await checkApiKeyValidity(apiKey);
 		return json({ valid: isValid });
 	} catch (error: any) {
-		return json({ valid: false, error: error.message || 'An unexpected error occurred.' }, { status: 500 });
+		return json(
+			{ valid: false, error: error.message || 'An unexpected error occurred.' },
+			{ status: 500 }
+		);
 	}
 };

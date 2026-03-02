@@ -32,17 +32,17 @@
 						>Faction Provisioner</a
 					>
 				</li>
-				<li>
+				<!-- <li>
 					<a href="/achievements" class:active={page.url.pathname.startsWith('/achievements')}
 						>Achievements</a
 					>
 				</li>
 				<li>
 					<a href="/wallet" class:active={page.url.pathname.startsWith('/wallet')}>Wallet</a>
-				</li>
+				</li> -->
 				<li><a href="/races" class:active={page.url.pathname.startsWith('/races')}>Races</a></li>
 			</ul>
-			<ApiKeyInput />
+			<!-- <ApiKeyInput /> -->
 			<ThemeToggle />
 			{#if navigating.to}
 				<div class="loading-bar"></div>

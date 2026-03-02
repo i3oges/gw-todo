@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { apiKey } from '$lib/stores/apiKey';
+	import Button from '$lib/Button.svelte';
 
 	let showApiKeyInput = $state(false);
 	let isValid = $state<boolean | null>(null); // null: unknown, true: valid, false: invalid
@@ -51,9 +52,9 @@
 </script>
 
 <div class="api-key-section">
-	<button onclick={() => (showApiKeyInput = !showApiKeyInput)} class="api-key-toggle-button">
+	<Button onclick={() => (showApiKeyInput = !showApiKeyInput)} class="api-key-toggle-button">
 		API Key
-	</button>
+	</Button>
 	{#if showApiKeyInput}
 		<input
 			type="text"
@@ -86,20 +87,6 @@
 		background-color: var(--background-color);
 		color: var(--text-color);
 		width: var(--api-key-input-width, 62ch); /* Use CSS variable for flexibility */
-	}
-
-	.api-key-toggle-button {
-		background-color: var(--primary-color);
-		color: var(--text-color);
-		border: none;
-		border-radius: 5px;
-		padding: 0.5rem 1rem;
-		cursor: pointer;
-		font-family: 'Cagliostro', sans-serif;
-	}
-
-	.api-key-toggle-button:hover {
-		opacity: 0.9;
 	}
 
 	.validity-indicator {

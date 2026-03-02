@@ -2,6 +2,7 @@
 	import Gw2Link from '$lib/Gw2Link.svelte';
 	import type { PageProps } from './$types';
 	import { checkedRacesStore } from '$lib/stores/checkedRacesStore';
+	import Button from '$lib/Button.svelte';
 
 	let { data }: PageProps = $props();
 
@@ -23,12 +24,7 @@
 				<p class="text-sm text-slate-400">Track your completed griffon races</p>
 			</div>
 		</div>
-		<button
-			onclick={() => checkedRacesStore.set({})}
-			class="reset cursor-pointer rounded px-4 py-2 font-bold text-white"
-		>
-			Reset
-		</button>
+		<Button onclick={() => checkedRacesStore.set({})}>Reset</Button>
 	</div>
 
 	{#if data.races}
@@ -61,10 +57,5 @@
 	.checked {
 		color: #888;
 		text-decoration: line-through;
-	}
-
-	/* Minimal custom styles, relying on Tailwind for most */
-	input[type='checkbox'] {
-		margin-right: 0.5rem;
 	}
 </style>

@@ -1,8 +1,19 @@
 import { getAccountAchievements } from '$lib/server/Gw2Api';
-import type { PageLoad } from '../$types';
+import type { PageServerLoad } from './$types';
+import { error } from '@sveltejs/kit';
 
-// src/routes/wallet/+page.ts
-export const load: PageLoad = async () => {
-	const achievements = await getAccountAchievements();
-	return { achievements };
+export const load: PageServerLoad = async ({ cookies }) => {
+	const apiKey = cookies.get('apiKey');
+
+	if (!apiKey) {
+		error(401, 'API Key missing');
+	}
+
+	try {
+		const achievements = await getAccountAchievements(apiKey);
+		return { achievements };
+	} catch (e: unknown) {
+		const message = e instanceof Error ? e.message : 'Unknown error';
+		error(500, `Failed to fetch achievements: ${message}`);
+	}
 };

@@ -1,24 +1,15 @@
 <script lang="ts">
-  import { theme } from '$lib/stores/theme';
+	import { theme } from '$lib/stores/theme';
 
-  function toggleTheme() {
-    $theme = $theme === 'dark' ? 'light' : 'dark';
-  }
+	function toggleTheme() {
+		$theme = $theme === 'dark' ? 'light' : 'dark';
+	}
 </script>
 
-<style>
-  button {
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-size: 1.5rem;
-  }
-</style>
-
-<button on:click={toggleTheme}>
-  {#if $theme === 'dark'}
-    ☀️
-  {:else}
-    🌙
-  {/if}
+<button on:click={toggleTheme} class="cursor-pointer border-none bg-none text-2xl">
+	{#if $theme === 'dark'}
+		☀️
+	{:else}
+		🌙
+	{/if}
 </button>
