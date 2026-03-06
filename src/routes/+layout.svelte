@@ -12,7 +12,7 @@
 <svelte:head>
 	<link rel="icon" href={favicon} />
 	<link href="https://fonts.googleapis.com/css2?family=Cagliostro&display=swap" rel="stylesheet" />
-	<title>GW TODO</title>
+	<title>GW TODOBOX</title>
 	{#if $theme === 'dark'}
 		<link rel="stylesheet" href="/styles/dark.css" />
 	{:else}
@@ -41,6 +41,12 @@
 					<a href="/wallet" class:active={page.url.pathname.startsWith('/wallet')}>Wallet</a>
 				</li> -->
 				<li><a href="/races" class:active={page.url.pathname.startsWith('/races')}>Races</a></li>
+				<li>
+					<a
+						href="/material-upgrades"
+						class:active={page.url.pathname.startsWith('/material-upgrades')}>Material Upgrades</a
+					>
+				</li>
 			</ul>
 			<!-- <ApiKeyInput /> -->
 			<ThemeToggle />

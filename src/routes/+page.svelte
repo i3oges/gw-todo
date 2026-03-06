@@ -14,30 +14,44 @@
 		</p>
 	</div>
 
-	<div class="grid w-full max-w-4xl grid-cols-1 gap-6 md:grid-cols-2">
+	<div class="grid w-full max-w-6xl grid-cols-1 gap-6 md:grid-cols-3">
 		<Card>
-			<span slot="title">💰 Faction Provisioner</span>
-			<span slot="description"
-				>Calculate the most cost-effective way to get your weekly Provisioner Tokens for legendary
-				armor and gear.</span
-			>
-			<Button slot="action" href="/faction-provisioner" class="w-full text-center"
-				>Open Calculator</Button
-			>
+			<span slot="title">💰 Provisioner</span>
+			<span slot="description">
+				Calculate cost-effective ways to get your weekly Provisioner Tokens for legendary gear.
+			</span>
+			<Button slot="action" href="/faction-provisioner" class="w-full text-center">
+				Open Calculator
+			</Button>
 		</Card>
 
 		<Card>
 			<span slot="title">🏁 Griffon Races</span>
-			<span slot="description"
-				>Track your completed griffon races across Tyria and push for those gold medals.</span
+			<span slot="description">
+				Track your completed griffon races across Tyria and push for those gold medals.
+			</span>
+			<Button slot="action" variant="secondary" href="/races" class="w-full text-center">
+				View Checklist
+			</Button>
+		</Card>
+
+		<Card>
+			<span slot="title">🔮 Material Upgrades</span>
+			<span slot="description">
+				Track Mystic Forge profitability for upgrading T5 materials to T6.
+			</span>
+			<Button
+				slot="action"
+				variant="ghost"
+				href="/material-upgrades"
+				class="w-full border border-purple-500/50 text-center hover:bg-purple-500/10"
 			>
-			<Button slot="action" variant="secondary" href="/races" class="w-full text-center"
-				>View Checklist</Button
-			>
+				Check Profits
+			</Button>
 		</Card>
 	</div>
 
 	<div class="pt-8">
-		<p class="text-sm text-slate-500 italic">More tools coming soon... maybe</p>
+		<p class="text-sm text-slate-500 italic">More tools coming soon...</p>
 	</div>
 </div>

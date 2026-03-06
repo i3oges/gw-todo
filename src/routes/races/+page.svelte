@@ -22,6 +22,13 @@
 					<span class="text-yellow-500">🏁</span> Guild Wars 2 Griffon Races
 				</h1>
 				<p class="text-sm text-slate-400">Track your completed griffon races</p>
+				<p class="text-sm text-slate-400">
+					TIP: use <a
+						class="text-(--secondary-color)"
+						href="https://github.com/LadyElyssa/LadyElyssaTacoTrails">LadyElyssa's trails</a
+					>
+					to complete these races easily
+				</p>
 			</div>
 		</div>
 		<Button onclick={() => checkedRacesStore.set({})}>Reset</Button>
