@@ -17,13 +17,13 @@
 <div class="mb-6 flex gap-2 border-b border-slate-700 pb-3">
 	<a
 		href="/races"
-		class="rounded-lg bg-slate-800 px-4 py-2 text-sm font-semibold text-white shadow"
+		class="rounded-lg px-4 py-2 text-sm font-semibold text-slate-400 hover:bg-slate-800 hover:text-white"
 	>
 		🦅 Griffon Races
 	</a>
 	<a
 		href="/races/roller-beetle"
-		class="rounded-lg px-4 py-2 text-sm font-semibold text-slate-400 hover:bg-slate-800 hover:text-white"
+		class="rounded-lg bg-slate-800 px-4 py-2 text-sm font-semibold text-white shadow"
 	>
 		🛞 Roller Beetle Races
 	</a>
@@ -34,15 +34,17 @@
 		<div class="mb-6 flex flex-col items-start justify-between gap-4 md:flex-row md:items-center">
 			<div>
 				<h1 class="flex items-center gap-2 text-xl font-bold text-white">
-					<span class="text-yellow-500">🏁</span> Guild Wars 2 Griffon Races
+					<span class="text-yellow-500">🏁</span> Guild Wars 2 Roller Beetle Races
 				</h1>
 				<p class="text-sm text-slate-400">
-					Track your completed griffon races <span class="text-xs text-amber-400/90 font-medium">(Resets daily at 00:00 UTC)</span>
+					Track your completed roller beetle races <span class="text-xs text-amber-400/90 font-medium">(Resets daily at 00:00 UTC)</span>
 				</p>
 				<p class="text-sm text-slate-400">
 					TIP: use <a
 						class="text-(--secondary-color)"
-						href="https://github.com/LadyElyssa/LadyElyssaTacoTrails">LadyElyssa's trails</a
+						href="https://github.com/LadyElyssa/LadyElyssaTacoTrails"
+						target="_blank"
+						rel="noreferrer">LadyElyssa's trails</a
 					>
 					to complete these races easily
 				</p>

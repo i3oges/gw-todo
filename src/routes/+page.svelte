@@ -14,7 +14,7 @@
 		</p>
 	</div>
 
-	<div class="grid w-full max-w-6xl grid-cols-1 gap-6 md:grid-cols-3">
+	<div class="grid w-full max-w-6xl grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
 		<Card>
 			<span slot="title">💰 Provisioner</span>
 			<span slot="description">
@@ -26,11 +26,21 @@
 		</Card>
 
 		<Card>
-			<span slot="title">🏁 Griffon Races</span>
+			<span slot="title">🦅 Griffon Races</span>
 			<span slot="description">
 				Track your completed griffon races across Tyria and push for those gold medals.
 			</span>
 			<Button slot="action" variant="secondary" href="/races" class="w-full text-center">
+				View Checklist
+			</Button>
+		</Card>
+
+		<Card>
+			<span slot="title">🛞 Beetle Races</span>
+			<span slot="description">
+				Track your completed roller beetle time trials and courses across Tyria.
+			</span>
+			<Button slot="action" variant="secondary" href="/races/roller-beetle" class="w-full text-center">
 				View Checklist
 			</Button>
 		</Card>

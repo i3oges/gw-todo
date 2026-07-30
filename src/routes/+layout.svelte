@@ -36,8 +36,11 @@
 					<a href="/achievements" class:active={page.url.pathname.startsWith('/achievements')}
 						>Achievements</a
 					>
-				</li>
+				</li> -->
 				<li>
+					<a href="/relics" class:active={page.url.pathname.startsWith('/relics')}>Relics</a>
+				</li>
+				<!-- <li>
 					<a href="/wallet" class:active={page.url.pathname.startsWith('/wallet')}>Wallet</a>
 				</li> -->
 				<li><a href="/races" class:active={page.url.pathname.startsWith('/races')}>Races</a></li>
@@ -47,8 +50,13 @@
 						class:active={page.url.pathname.startsWith('/material-upgrades')}>Material Upgrades</a
 					>
 				</li>
+				<!-- <li>
+					<a href="/calculator" class:active={page.url.pathname.startsWith('/calculator')}
+						>Calculator</a
+					>
+				</li> -->
 			</ul>
-			<!-- <ApiKeyInput /> -->
+			<ApiKeyInput />
 			<ThemeToggle />
 			{#if navigating.to}
 				<div class="loading-bar"></div>

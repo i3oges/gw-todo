@@ -1,6 +1,7 @@
 import { AccountAchievementsSchema } from '$lib/schema/account/AccountAchievementsSchema';
 import { WalletSchema } from '$lib/schema/account/WalletSchema';
 import { CommercePriceSchema } from '$lib/schema/CommerceSchema';
+import { RecipeSchema } from '$lib/schema/RecipeSchema';
 import z from 'zod';
 
 export const GW2_BASE_URL = 'https://api.guildwars2.com/v2';
@@ -41,6 +42,7 @@ const fetchGw2 = async <T extends z.ZodType>(
 };
 
 export const getItemPrices = async (ids: number[]) => {
+	if (ids.length === 0) return [];
 	return fetchGw2(
 		'/commerce/prices',
 		z.array(CommercePriceSchema),
@@ -50,6 +52,7 @@ export const getItemPrices = async (ids: number[]) => {
 };
 
 export const getItemDetails = async (ids: number[]) => {
+	if (ids.length === 0) return [];
 	return fetchGw2(
 		'/items',
 		z.array(ItemSchema),
@@ -58,12 +61,52 @@ export const getItemDetails = async (ids: number[]) => {
 	);
 };
 
+export const getRecipes = async (ids: number[]) => {
+	if (ids.length === 0) return [];
+	return fetchGw2(
+		'/recipes',
+		z.array(RecipeSchema),
+		undefined,
+		new URLSearchParams({ ids: ids.join(',') })
+	);
+};
+
+export const searchRecipesByOutput = async (outputItemId: number) => {
+	const recipeIds = await fetchGw2(
+		'/recipes/search',
+		z.array(z.number()),
+		undefined,
+		new URLSearchParams({ output: outputItemId.toString() })
+	);
+	if (recipeIds.length === 0) return [];
+	return getRecipes(recipeIds);
+};
+
+export const searchItemsByName = async (name: string) => {
+	// The official GW2 API doesn't support searching by name directly.
+	// We'll use a hacky way: search items by name is not possible via official API without downloading all IDs.
+	// For now, we'll try to find a way or just inform the user.
+	// Some people use GW2Efficiency's API for this.
+	// Let's use a public endpoint if available or just return empty for now.
+	return [];
+};
+
 export const getAccountAchievements = async (apiKey: string) => {
 	return fetchGw2(
 		'/account/achievements',
 		z.array(AccountAchievementsSchema),
 		apiKey, // Pass apiKey
 		new URLSearchParams({ page: '0', page_size: '10' })
+	);
+};
+
+export const getAccountRelicAchievements = async (apiKey: string, ids: number[]) => {
+	if (ids.length === 0) return [];
+	return fetchGw2(
+		'/account/achievements',
+		z.array(AccountAchievementsSchema),
+		apiKey,
+		new URLSearchParams({ ids: ids.join(',') })
 	);
 };
 
