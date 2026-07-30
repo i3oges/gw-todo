@@ -102,20 +102,21 @@
 			<div class="space-y-2">
 				<div class="flex items-center gap-3">
 					<div
-						class="h-10 w-10 shrink-0 overflow-hidden rounded-lg bg-amber-950/60 p-1 border border-amber-500/40 shadow-inner"
+						class="h-10 w-10 shrink-0 overflow-hidden rounded-lg border border-amber-500/40 bg-amber-950/60 p-1 shadow-inner"
 					>
 						<img
-							src="https://wiki.guildwars2.com/images/c/ce/Legendary_Relic.png"
+							src="https://render.guildwars2.com/file/08DED07BF6DF37E69A08D1C49D9C45D81BD8A5CA/3255567.png"
 							alt="Legendary Relic"
 							class="h-full w-full object-contain"
 						/>
 					</div>
 					<div>
-						<h1 class="text-2xl font-bold text-white flex items-center gap-2">
+						<h1 class="flex items-center gap-2 text-2xl font-bold text-white">
 							Legendary Relic Unlock Achievements
 						</h1>
 						<p class="text-sm text-slate-400">
-							Track expansion relic collection achievements required for your Legendary Relic (Core & Secrets of the Obscure relics are automatically unlocked). Reference list from
+							Track expansion relic collection achievements required for your Legendary Relic (Core
+							& Secrets of the Obscure relics are automatically unlocked). Reference list from
 							<a
 								href="https://wiki.guildwars2.com/wiki/Legendary_Relic"
 								target="_blank"
@@ -130,20 +131,27 @@
 
 				{#if !data.apiKeyPresent}
 					<div
-						class="mt-3 rounded-lg border border-amber-500/30 bg-amber-950/30 p-3 text-xs text-amber-300 flex items-center justify-between"
+						class="mt-3 flex items-center justify-between rounded-lg border border-amber-500/30 bg-amber-950/30 p-3 text-xs text-amber-300"
 					>
-						<span>⚠️ No API key set. Enter your GW2 API key in the top navigation bar to see your account's achievement progress.</span>
+						<span
+							>⚠️ No API key set. Enter your GW2 API key in the top navigation bar to see your
+							account's achievement progress.</span
+						>
 					</div>
 				{/if}
 			</div>
 
 			<!-- Overall Progress Bar -->
-			<div class="w-full md:w-80 space-y-2 rounded-lg border border-slate-800 bg-slate-950/60 p-4">
+			<div class="w-full space-y-2 rounded-lg border border-slate-800 bg-slate-950/60 p-4 md:w-80">
 				<div class="flex items-center justify-between text-xs font-semibold">
 					<span class="text-slate-300">Tracked Relics Unlocked</span>
-					<span class="text-amber-400 font-mono text-sm">{unlockedCount} / {totalCount} ({overallPercentage}%)</span>
+					<span class="font-mono text-sm text-amber-400"
+						>{unlockedCount} / {totalCount} ({overallPercentage}%)</span
+					>
 				</div>
-				<div class="h-3.5 w-full overflow-hidden rounded-full bg-slate-800 p-0.5 border border-slate-700">
+				<div
+					class="h-3.5 w-full overflow-hidden rounded-full border border-slate-700 bg-slate-800 p-0.5"
+				>
 					<div
 						class="h-full rounded-full bg-gradient-to-r from-emerald-500 via-teal-400 to-cyan-400 transition-all duration-500"
 						style="width: {overallPercentage}%"
@@ -155,16 +163,15 @@
 		<!-- Expansion Breakdown Stats -->
 		<div class="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-2">
 			{#each expansionStats as stat}
-				<div class="rounded-lg border border-slate-800 bg-slate-800/40 p-3 text-center transition hover:border-slate-700">
-					<div class="text-xs font-medium text-slate-400 truncate">{stat.expansion}</div>
-					<div class="mt-1 text-lg font-bold font-mono text-slate-100">
-						{stat.unlocked} <span class="text-xs text-slate-500 font-normal">/ {stat.total}</span>
+				<div
+					class="rounded-lg border border-slate-800 bg-slate-800/40 p-3 text-center transition hover:border-slate-700"
+				>
+					<div class="truncate text-xs font-medium text-slate-400">{stat.expansion}</div>
+					<div class="mt-1 font-mono text-lg font-bold text-slate-100">
+						{stat.unlocked} <span class="text-xs font-normal text-slate-500">/ {stat.total}</span>
 					</div>
 					<div class="mt-1.5 h-1.5 w-full overflow-hidden rounded-full bg-slate-800">
-						<div
-							class="h-full rounded-full bg-emerald-500"
-							style="width: {stat.pct}%"
-						></div>
+						<div class="h-full rounded-full bg-emerald-500" style="width: {stat.pct}%"></div>
 					</div>
 				</div>
 			{/each}
@@ -172,7 +179,9 @@
 	</div>
 
 	<!-- Controls & Filters -->
-	<div class="flex flex-col gap-4 rounded-xl border border-slate-700 bg-slate-900 p-4 shadow-lg md:flex-row md:items-center md:justify-between">
+	<div
+		class="flex flex-col gap-4 rounded-xl border border-slate-700 bg-slate-900 p-4 shadow-lg md:flex-row md:items-center md:justify-between"
+	>
 		<!-- Search -->
 		<div class="relative flex-1">
 			<input
@@ -184,7 +193,7 @@
 			{#if search}
 				<button
 					onclick={() => (search = '')}
-					class="absolute right-3 top-1/2 -translate-y-1/2 text-xs text-slate-400 hover:text-white"
+					class="absolute top-1/2 right-3 -translate-y-1/2 text-xs text-slate-400 hover:text-white"
 				>
 					✕
 				</button>
@@ -234,12 +243,16 @@
 					<div class="flex items-center justify-between border-b border-slate-800 pb-2">
 						<div class="flex items-center gap-3">
 							<h2 class="text-lg font-bold text-slate-100">{group.set.name}</h2>
-							<span class="rounded border px-2 py-0.5 text-xs font-semibold uppercase tracking-wider {getExpansionBadgeStyle(group.set.expansion)}">
+							<span
+								class="rounded border px-2 py-0.5 text-xs font-semibold tracking-wider uppercase {getExpansionBadgeStyle(
+									group.set.expansion
+								)}"
+							>
 								{group.set.expansion}
 							</span>
 						</div>
-						<span class="text-xs font-mono text-slate-400">
-							{group.relics.filter(r => r.unlocked).length} / {group.set.bitsCount} Unlocked
+						<span class="font-mono text-xs text-slate-400">
+							{group.relics.filter((r) => r.unlocked).length} / {group.set.bitsCount} Unlocked
 						</span>
 					</div>
 
@@ -247,36 +260,51 @@
 					<div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
 						{#each group.relics as relic}
 							<div
-								class="group relative flex flex-col justify-between rounded-xl border p-4 transition-all duration-200 shadow-md {relic.unlocked
+								class="group relative flex flex-col justify-between rounded-xl border p-4 shadow-md transition-all duration-200 {relic.unlocked
 									? 'border-slate-700 bg-slate-900/90 hover:border-slate-500'
-									: 'border-slate-800/80 bg-slate-950/60 opacity-75 hover:opacity-100 hover:border-slate-700'}"
+									: 'border-slate-800/80 bg-slate-950/60 opacity-75 hover:border-slate-700 hover:opacity-100'}"
 							>
 								<div>
 									<!-- Top row: Icon + Name + Status -->
 									<div class="flex items-start gap-3">
-										<div class="relative h-12 w-12 shrink-0 rounded-lg bg-slate-800 p-1 border border-slate-700">
+										<div
+											class="relative h-12 w-12 shrink-0 rounded-lg border border-slate-700 bg-slate-800 p-1"
+										>
 											{#if relic.icon}
-												<img src={relic.icon} alt={relic.name} class="h-full w-full object-contain" />
+												<img
+													src={relic.icon}
+													alt={relic.name}
+													class="h-full w-full object-contain"
+												/>
 											{:else}
-												<div class="flex h-full w-full items-center justify-center text-xs text-slate-500">
+												<div
+													class="flex h-full w-full items-center justify-center text-xs text-slate-500"
+												>
 													🔮
 												</div>
 											{/if}
 										</div>
 
 										<div class="min-w-0 flex-1">
-											<h3 class="text-sm font-bold text-slate-100 group-hover:text-amber-300 transition-colors truncate" title={relic.name}>
+											<h3
+												class="truncate text-sm font-bold text-slate-100 transition-colors group-hover:text-amber-300"
+												title={relic.name}
+											>
 												{relic.name}
 											</h3>
 
 											<!-- Lock Badge -->
 											<div class="mt-1 flex items-center gap-1.5">
 												{#if relic.unlocked}
-													<span class="inline-flex items-center gap-1 rounded bg-emerald-950/80 px-2 py-0.5 text-xs font-semibold text-emerald-400 border border-emerald-700/50">
+													<span
+														class="inline-flex items-center gap-1 rounded border border-emerald-700/50 bg-emerald-950/80 px-2 py-0.5 text-xs font-semibold text-emerald-400"
+													>
 														✓ Unlocked
 													</span>
 												{:else}
-													<span class="inline-flex items-center gap-1 rounded bg-slate-800 px-2 py-0.5 text-xs font-semibold text-slate-400 border border-slate-700">
+													<span
+														class="inline-flex items-center gap-1 rounded border border-slate-700 bg-slate-800 px-2 py-0.5 text-xs font-semibold text-slate-400"
+													>
 														🔒 Locked
 													</span>
 												{/if}
@@ -286,23 +314,29 @@
 
 									<!-- Description / Requirement -->
 									{#if relic.requirementText}
-										<p class="mt-3 text-xs text-slate-400 line-clamp-3 leading-relaxed bg-slate-950/40 p-2 rounded border border-slate-800/60">
+										<p
+											class="mt-3 line-clamp-3 rounded border border-slate-800/60 bg-slate-950/40 p-2 text-xs leading-relaxed text-slate-400"
+										>
 											{relic.requirementText}
 										</p>
 									{:else if relic.description}
-										<p class="mt-3 text-xs text-slate-400 line-clamp-3 leading-relaxed bg-slate-950/40 p-2 rounded border border-slate-800/60">
+										<p
+											class="mt-3 line-clamp-3 rounded border border-slate-800/60 bg-slate-950/40 p-2 text-xs leading-relaxed text-slate-400"
+										>
 											{relic.description}
 										</p>
 									{/if}
 								</div>
 
 								<!-- Card Footer / Quick Actions -->
-								<div class="mt-4 flex items-center justify-between border-t border-slate-800/80 pt-3">
+								<div
+									class="mt-4 flex items-center justify-between border-t border-slate-800/80 pt-3"
+								>
 									<a
 										href="https://wiki.guildwars2.com/wiki/{encodeURIComponent(relic.name)}"
 										target="_blank"
 										rel="noopener noreferrer"
-										class="text-xs text-blue-400 hover:text-blue-300 flex items-center gap-1"
+										class="flex items-center gap-1 text-xs text-blue-400 hover:text-blue-300"
 									>
 										Wiki ↗
 									</a>
@@ -310,7 +344,7 @@
 									{#if relic.chatLink}
 										<button
 											onclick={() => copyChatLink(relic)}
-											class="rounded bg-slate-800 hover:bg-slate-700 px-2 py-1 text-xs text-slate-300 transition-colors font-mono"
+											class="rounded bg-slate-800 px-2 py-1 font-mono text-xs text-slate-300 transition-colors hover:bg-slate-700"
 											title="Copy chat link {relic.chatLink}"
 										>
 											{#if copiedId === relic.itemId}
