@@ -1,7 +1,8 @@
 <script lang="ts">
 	import Gw2Link from '$lib/Gw2Link.svelte';
 	import GWCPrice from '$lib/GWCPrice.svelte';
-	import { be } from 'zod/v4/locales';
+	import { browser } from '$app/environment';
+	import { onMount } from 'svelte';
 	import type { PageProps } from './$types';
 
 	// This prop is automatically populated by the load function
@@ -33,8 +34,93 @@
 		}
 	];
 
+	const LOCAL_STORAGE_KEY = 'faction_provisioner_checked';
+
+	export function getWeeklyResetTimestamp(date = new Date()): string {
+		const utcYear = date.getUTCFullYear();
+		const utcMonth = date.getUTCMonth();
+		const utcDate = date.getUTCDate();
+		const dayOfWeek = date.getUTCDay();
+
+		let daysSinceMonday = (dayOfWeek - 1 + 7) % 7;
+		const resetToday = new Date(Date.UTC(utcYear, utcMonth, utcDate, 7, 30, 0, 0));
+
+		if (dayOfWeek === 1 && date.getTime() < resetToday.getTime()) {
+			daysSinceMonday = 7;
+		}
+
+		const lastReset = new Date(Date.UTC(utcYear, utcMonth, utcDate - daysSinceMonday, 7, 30, 0, 0));
+		return lastReset.toISOString();
+	}
+
 	const selectedDiciplines = $state(diciplines.map((d) => d.dicipline));
-	const checkedItems = $state<Record<number, boolean>>({});
+	let checkedItems = $state<Record<string, boolean>>({});
+	let activeResetTime = getWeeklyResetTimestamp();
+
+	onMount(() => {
+		const currentReset = getWeeklyResetTimestamp();
+		activeResetTime = currentReset;
+		try {
+			const stored = localStorage.getItem(LOCAL_STORAGE_KEY);
+			if (stored) {
+				const parsed = JSON.parse(stored);
+				if (
+					parsed &&
+					typeof parsed === 'object' &&
+					parsed.lastReset === currentReset &&
+					parsed.checked
+				) {
+					checkedItems = parsed.checked;
+				} else {
+					localStorage.removeItem(LOCAL_STORAGE_KEY);
+				}
+			}
+		} catch (e) {
+			console.error('Failed to load provisioner checked items', e);
+		}
+
+		function checkReset() {
+			const currentReset = getWeeklyResetTimestamp();
+			if (currentReset !== activeResetTime) {
+				activeResetTime = currentReset;
+				checkedItems = {};
+				try {
+					localStorage.removeItem(LOCAL_STORAGE_KEY);
+				} catch (e) {
+					console.error('Failed to clear provisioner checked items', e);
+				}
+			}
+		}
+
+		const interval = setInterval(checkReset, 60000);
+		window.addEventListener('focus', checkReset);
+		const handleVisibilityChange = () => {
+			if (document.visibilityState === 'visible') {
+				checkReset();
+			}
+		};
+		document.addEventListener('visibilitychange', handleVisibilityChange);
+
+		return () => {
+			clearInterval(interval);
+			window.removeEventListener('focus', checkReset);
+			document.removeEventListener('visibilitychange', handleVisibilityChange);
+		};
+	});
+
+	$effect(() => {
+		if (browser) {
+			const dataToStore = {
+				lastReset: activeResetTime,
+				checked: $state.snapshot(checkedItems)
+			};
+			try {
+				localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(dataToStore));
+			} catch (e) {
+				console.error('Failed to save provisioner checked items', e);
+			}
+		}
+	});
 	let bestBuy = $state<'buy_price' | 'sell_price'>('buy_price');
 	const exchanges = $derived(
 		data.provisionerItems.map((items) => {
@@ -62,9 +148,10 @@
 	);
 	const totals = $derived(
 		exchanges.reduce(
-			(acc, item) => {
-				item.exchanges.forEach((exchange) => {
-					if (exchange.item && checkedItems[exchange.item.id]) {
+			(acc, item, i) => {
+				item.exchanges.forEach((exchange, j) => {
+					const key = `exchange-${i}-${j}`;
+					if (exchange.item && checkedItems[key]) {
 						acc.buy += exchange.item.buy_price * 7;
 						acc.sell += exchange.item.sell_price * 7;
 					}
@@ -75,9 +162,10 @@
 		)
 	);
 	const itemIds = $derived(
-		exchanges.reduce((acc: number[], { exchanges }) => {
-			exchanges.forEach((exchange) => {
-				if (exchange.item && checkedItems[exchange.item.id]) {
+		exchanges.reduce((acc: number[], { exchanges }, i) => {
+			exchanges.forEach((exchange, j) => {
+				const key = `exchange-${i}-${j}`;
+				if (exchange.item && checkedItems[key]) {
 					acc.push(exchange.item.id);
 				}
 			});
@@ -98,6 +186,7 @@
 			<p class="max-w-sm text-sm text-slate-400">
 				Check off items to craft/buy, click open in Gw2Efficiency, craft/buy, then turn in for
 				provisioner tokens
+				<span class="text-xs font-medium text-amber-400/90">(Resets weekly at 07:30 UTC)</span>
 			</p>
 		</div>
 		<div class="flex flex-col items-center gap-2">
@@ -176,11 +265,9 @@
 									<input
 										type="checkbox"
 										id={`exchange-${i}-${j}`}
-										checked={checkedItems[exchange.item?.id || 0] || false}
+										checked={checkedItems[`exchange-${i}-${j}`] || false}
 										onchange={() => {
-											if (exchange.item) {
-												checkedItems[exchange.item.id] = !checkedItems[exchange.item.id];
-											}
+											checkedItems[`exchange-${i}-${j}`] = !checkedItems[`exchange-${i}-${j}`];
 										}}
 										class="h-5 w-5 rounded border-gray-300 text-blue-600 focus:ring-blue-500"
 									/>
