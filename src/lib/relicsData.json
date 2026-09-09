@@ -1,380 +1,380 @@
 [
-  {
-    "id": 9266,
-    "name": "Relics—Visions of Eternity Set 3",
-    "expansion": "Visions of Eternity",
-    "defaultUnlocked": false,
-    "bitsCount": 6,
-    "bits": [
-      {
-        "bitIndex": 0,
-        "itemId": 109664,
-        "name": "Relic of the Cruel Overseer",
-        "icon": "https://render.guildwars2.com/file/AECE9B16DE04F756C501743BA863B00A377CE70B/3770710.png",
-        "chatLink": "[&AgFgrAEA]",
-        "description": "Gain stacks of Kuda's Cruelty when you inflict damaging conditions. After reaching the maximum number of stacks, convert outgoing condition damage into healing for a short period of time.",
-        "requirementText": "Acquired as a reward by completing the Visions of Eternity: The Only Way Mastery achievement."
-      },
-      {
-        "bitIndex": 1,
-        "itemId": 109351,
-        "name": "Relic of the Director",
-        "icon": "https://render.guildwars2.com/file/6FD76BA11105EC67451D9E7E1DE938C91DB3AD68/3770711.png",
-        "chatLink": "[&AgEnqwEA]",
-        "description": "Inflict vulnerability on nearby enemies when you use a healing skill. For a short period of time, you deal increased damage to vulnerable foes.",
-        "requirementText": "Acquired as a reward by completing the So It Is Written achievement."
-      },
-      {
-        "bitIndex": 2,
-        "itemId": 109522,
-        "name": "Relic of the Doyen",
-        "icon": "https://render.guildwars2.com/file/EF797D16D0D211064031129135C864311856CDB1/3770712.png",
-        "chatLink": "[&AgHSqwEA]",
-        "description": "Take reduced incoming strike damage while you have resolution. <c=@reminder>This does not stack with other sources of the same effect.</c>",
-        "requirementText": "Acquired as a reward by completing the Castoran Curse-Breaker achievement."
-      },
-      {
-        "bitIndex": 3,
-        "itemId": 109264,
-        "name": "Relic of Galdra",
-        "icon": "https://render.guildwars2.com/file/CE07976D4420779EC0082AFE06B73F3AA6AE2348/3770713.png",
-        "chatLink": "[&AgHQqgEA]",
-        "description": "When you use an elite skill, launch projectiles that inflict burning at nearby foes.",
-        "requirementText": "Acquired as a reward by completing the Eternal Watch achievement."
-      },
-      {
-        "bitIndex": 4,
-        "itemId": 109267,
-        "name": "Relic of the Sacred Grounds",
-        "icon": "https://render.guildwars2.com/file/A3C6C20BE0A1299F05EB5C713558A86D9AA7C176/3770714.png",
-        "chatLink": "[&AgHTqgEA]",
-        "description": "Gain protection when you use a <c=@abilitytype>well</c> or <c=@abilitytype>consecration</c> skill.",
-        "requirementText": "Acquired as a tier reward from the Eternity's Garden Mastery achievement."
-      },
-      {
-        "bitIndex": 5,
-        "itemId": 109709,
-        "name": "Relic of Watch",
-        "icon": "https://render.guildwars2.com/file/33D70B101ECFFD0C42205877E5BFE20EC461C19C/3770715.png",
-        "chatLink": "[&AgGNrAEA]",
-        "description": "Immobilization you inflict lasts longer. Weaken foes when you immobilize them.",
-        "requirementText": "Acquired as a reward by completing the Eternity's Garden Explorer achievement."
-      }
-    ]
-  },
-  {
-    "id": 8363,
-    "name": "Relics—Janthir Wilds Set 1",
-    "expansion": "Janthir Wilds",
-    "defaultUnlocked": false,
-    "bitsCount": 6,
-    "bits": [
-      {
-        "bitIndex": 0,
-        "itemId": 102245,
-        "name": "Relic of Atrocity",
-        "icon": "https://render.guildwars2.com/file/F1F3033EA7780C093A651253ACB92E415C0525F6/3375218.png",
-        "chatLink": "[&AgFljwEA]",
-        "description": "Your lifesteal damage and healing is increased.",
-        "requirementText": "Acquired as a tier reward from the Janthir Wilds: Act 2 Mastery achievement."
-      },
-      {
-        "bitIndex": 1,
-        "itemId": 103574,
-        "name": "Relic of the Claw",
-        "icon": "https://render.guildwars2.com/file/19B5DB56E495C70754A8BE3621CADC0FD7402845/3375220.png",
-        "chatLink": "[&AgGWlAEA]",
-        "description": "Deal increased strike damage for a duration after you disable a foe.",
-        "requirementText": "Acquired as a tier reward from the Lowland Shore Mastery achievement."
-      },
-      {
-        "bitIndex": 2,
-        "itemId": 102595,
-        "name": "Relic of the Stormsinger",
-        "icon": "https://render.guildwars2.com/file/53B8A123D07CC679364EF4CF4BD7537624320919/3375223.png",
-        "chatLink": "[&AgHDkAEA]",
-        "description": "After using a movement skill, your next attack creates an arc of chain lightning that strikes nearby enemies.",
-        "requirementText": "Purchased from a Renown Heart vendor in Echoing Hills, located in Janthir Syntri."
-      },
-      {
-        "bitIndex": 3,
-        "itemId": 102199,
-        "name": "Relic of the Blightbringer",
-        "icon": "https://render.guildwars2.com/file/286C60AC6FA239B0070293039091A44476A35E90/3375219.png",
-        "chatLink": "[&AgE3jwEA]",
-        "description": "Gain stacks of Greer's Virulence when you inflict poison on a foe. After reaching the maximum number of stacks, the next time you inflict poison also inflicts additional conditions on nearby enemies.",
-        "requirementText": "Acquired as a tier reward from the Janthir Syntri Mastery achievement."
-      },
-      {
-        "bitIndex": 4,
-        "itemId": 103015,
-        "name": "Relic of Rivers",
-        "icon": "https://render.guildwars2.com/file/4C054AF70F0CE14E46B159686F1AA70A320A1E07/3375221.png",
-        "chatLink": "[&AgFnkgEA]",
-        "description": "Gain alacrity and regeneration at the end of your dodge roll.",
-        "requirementText": "Purchased from a renown heart vendor in Harvest Den, located in Lowland Shore."
-      },
-      {
-        "bitIndex": 5,
-        "itemId": 103424,
-        "name": "Relic of Sorrow",
-        "icon": "https://render.guildwars2.com/file/F943C04CD27C463AB167FDF49F9CCC3E27F0AD18/3375222.png",
-        "chatLink": "[&AgEAlAEA]",
-        "description": "After using an elite skill, create an area that protects allies and destroys enemy projectiles.",
-        "requirementText": "Acquired as a tier reward from the Janthir Wilds: Act 1 Mastery achievement."
-      }
-    ]
-  },
-  {
-    "id": 8725,
-    "name": "Relics—Janthir Wilds Set 3",
-    "expansion": "Janthir Wilds",
-    "defaultUnlocked": false,
-    "bitsCount": 6,
-    "bits": [
-      {
-        "bitIndex": 0,
-        "itemId": 104849,
-        "name": "Relic of Agony",
-        "icon": "https://render.guildwars2.com/file/7060CF69EFEB7A99150F2F1A7E0E1F1D2D9ED0D2/3629395.png",
-        "chatLink": "[&AgGRmQEA]",
-        "description": "Enemies you interrupt are inflicted with Agony of the Choir.<br><c=@reminder>This trait can only affect enemies with defiance bars once per interval.</c>",
-        "requirementText": "Acquire this relic from the Bava Nisos Rift Hunting achievement or from the Janthir Wilds reward track."
-      },
-      {
-        "bitIndex": 1,
-        "itemId": 104848,
-        "name": "Relic of Bava Nisos",
-        "icon": "https://render.guildwars2.com/file/213C437140552326BD633D1AFF150B48DF2EB544/3629396.png",
-        "chatLink": "[&AgGQmQEA]",
-        "description": "Upon using a <c=@abilitytype>stance</c> skill, cleanse conditions from yourself.",
-        "requirementText": "Acquire this relic from the Bava Nisos Mastery achievement or from the Janthir Wilds reward track."
-      },
-      {
-        "bitIndex": 2,
-        "itemId": 104800,
-        "name": "Relic of Bloodstone",
-        "icon": "https://render.guildwars2.com/file/A7327A7EDB4705EA05261110526D72AFEAF7DAB4/3629397.png",
-        "chatLink": "[&AgFgmQEA]",
-        "description": "Gain Bloodstone Volatility when you successfully combo a field with a blast finisher. Blasting at the stack threshold triggers an explosion, granting increased damage.",
-        "requirementText": "Acquire this relic by completing the Convergence Challenge Mode—Greer: Silver achievement or from the Janthir Wilds reward track."
-      },
-      {
-        "bitIndex": 3,
-        "itemId": 104938,
-        "name": "Relic of the Living City",
-        "icon": "https://render.guildwars2.com/file/6CAF0358FBD9DDD84AB3302E2D67329A3AA83DEC/3629398.png",
-        "chatLink": "[&AgHqmQEA]",
-        "description": "Complete each trigger once to gain stacks of Titanic Potential:\n• Use a healing skill\n• Use an elite skill\n• Finish a combo field\n• Disable an enemy\n• Evade an attack\nAt 5 stacks, gain Soul of the Titan, providing increased attributes and all boons for its duration.",
-        "requirementText": "Acquire this relic from the Bava Nisos Explorer achievement or from the Janthir Wilds reward track."
-      },
-      {
-        "bitIndex": 4,
-        "itemId": 104994,
-        "name": "Relic of Mistburn",
-        "icon": "https://render.guildwars2.com/file/FFCB62CF19806066D21C0EA1BA43986C0DA2B6F3/3629399.png",
-        "chatLink": "[&AgEimgEA]",
-        "description": "When you grant might to yourself, grant yourself additional might. Gain increased critical-strike chance while at or above the might threshold.",
-        "requirementText": "Acquire this relic by completing the Convergence Challenge Mode—Ura: Silver Achievement or from the Janthir Wilds reward track."
-      },
-      {
-        "bitIndex": 5,
-        "itemId": 104733,
-        "name": "Relic of the Phenom",
-        "icon": "https://render.guildwars2.com/file/AD0AE5035A197220507642E1169ED55E0C58A29D/3629400.png",
-        "chatLink": "[&AgEdmQEA]",
-        "description": "Upon using a <c=@abilitytype>cantrip</c> or <c=@abilitytype>meditation</c> skill, gain protection.",
-        "requirementText": "Acquire this relic by completing the Convergence Challenge Mode—Decima: Silver achievement or from the Janthir Wilds reward track."
-      }
-    ]
-  },
-  {
-    "id": 9101,
-    "name": "Relics—Visions of Eternity Set 2",
-    "expansion": "Visions of Eternity",
-    "defaultUnlocked": false,
-    "bitsCount": 6,
-    "bits": [
-      {
-        "bitIndex": 0,
-        "itemId": 107192,
-        "name": "Relic of the Alliance",
-        "icon": "https://render.guildwars2.com/file/406F52FEEF9CC64AF45CA27C4A240A6E0E5443A2/3745064.png",
-        "chatLink": "[&AgG4ogEA]",
-        "description": "Using a signet skill reduces the recharge of all signet skills.",
-        "requirementText": "Unlock this relic by buying the relic from a Visions of Eternity relic vendor or by progressing the Raid Quickplay Frequenter achievement or a Visions of Eternity reward track."
-      },
-      {
-        "bitIndex": 1,
-        "itemId": 107061,
-        "name": "Relic of the Coral Heart",
-        "icon": "https://render.guildwars2.com/file/5DD9D2052B2C3EF921EBE6E243580CE3A1011B2F/3745065.png",
-        "chatLink": "[&AgE1ogEA]",
-        "description": "After using a healing skill, temporarily deal damage to nearby enemies when struck.",
-        "requirementText": "Unlock this relic by buying the relic from a Visions of Eternity relic vendor or by progressing the Raid Quickplay Frequenter achievement or a Visions of Eternity reward track."
-      },
-      {
-        "bitIndex": 2,
-        "itemId": 107030,
-        "name": "Relic of Fog",
-        "icon": "https://render.guildwars2.com/file/F31809ABA515534B10E7D8B90DDC513DD311A5D6/3745066.png",
-        "chatLink": "[&AgEWogEA]",
-        "description": "After dodge rolling in combat, the next incoming strike will always be a glancing blow.",
-        "requirementText": "Unlock this relic by buying the relic from a Visions of Eternity relic vendor or by progressing the Raid Quickplay Frequenter achievement or a Visions of Eternity reward track."
-      },
-      {
-        "bitIndex": 3,
-        "itemId": 107124,
-        "name": "Relic of the Forest Dweller",
-        "icon": "https://render.guildwars2.com/file/DC19DA3EC27F49593B93F9042264F5DD36FED4ED/3745067.png",
-        "chatLink": "[&AgF0ogEA]",
-        "description": "After using an elite skill, launch bubbles at nearby enemies. Enemies struck by the bubbles become trapped and float for a short period of time.",
-        "requirementText": "Unlock this relic by buying the relic from a Visions of Eternity relic vendor or by progressing the Raid Quickplay Frequenter achievement or a Visions of Eternity reward track."
-      },
-      {
-        "bitIndex": 4,
-        "itemId": 106920,
-        "name": "Relic of the Nautical Beast",
-        "icon": "https://render.guildwars2.com/file/0EE97FA7FB5DC098447AAF6401DF5A09C47B33AD/3745068.png",
-        "chatLink": "[&AgGooQEA]",
-        "description": "Create a tidal wave that damages enemies and heals allies when you successfully combo a water field with a leap finisher.",
-        "requirementText": "Unlock this relic by buying the relic from a Visions of Eternity relic vendor or by progressing the Raid Quickplay Frequenter achievement or a Visions of Eternity reward track."
-      },
-      {
-        "bitIndex": 5,
-        "itemId": 106916,
-        "name": "Relic of Shackles",
-        "icon": "https://render.guildwars2.com/file/7946A50DBDC2E45E004AAA801904015C50CC22B3/3745069.png",
-        "chatLink": "[&AgGkoQEA]",
-        "description": "Tether yourself to enemies when you immobilize them. Deal damage to enemies that are still in range of the tether when it expires. <c=@reminder>Each enemy can only be tethered once per interval.</c>",
-        "requirementText": "Unlock this relic by buying the relic from a Visions of Eternity relic vendor or by progressing the Raid Quickplay Frequenter achievement or a Visions of Eternity reward track."
-      }
-    ]
-  },
-  {
-    "id": 8959,
-    "name": "Relics—Visions of Eternity Set 1",
-    "expansion": "Visions of Eternity",
-    "defaultUnlocked": false,
-    "bitsCount": 6,
-    "bits": [
-      {
-        "bitIndex": 0,
-        "itemId": 106355,
-        "name": "Relic of the Scoundrel",
-        "icon": "https://render.guildwars2.com/file/0B58A2B6F00D9657EE141001A8AA240DDBDE300D/3709383.png",
-        "chatLink": "[&AgFznwEA]",
-        "description": "Gain increased critical-hit chance for a duration after inflicting blindness or weakness.",
-        "requirementText": "Acquired as a tier reward from the Visions of Eternity: Act 1 Mastery achievement."
-      },
-      {
-        "bitIndex": 1,
-        "itemId": 105585,
-        "name": "Relic of the First Revenant",
-        "icon": "https://render.guildwars2.com/file/7DA30BCFB0E0A04A5D3DFE3D25DAF142D90E1596/3709380.png",
-        "chatLink": "[&AgFxnAEA]",
-        "description": "Gain incoming condition damage reduction while you have resistance.",
-        "requirementText": "Acquired as a tier reward from the Visions of Eternity: Act 2 Mastery achievement."
-      },
-      {
-        "bitIndex": 2,
-        "itemId": 106221,
-        "name": "Relic of the Pirate Queen",
-        "icon": "https://render.guildwars2.com/file/6C7D53936BFC0DFD52BACDD9A2C7F0909E424F0D/3709382.png",
-        "chatLink": "[&AgHtngEA]",
-        "description": "Gain quickness when you disable a foe.",
-        "requirementText": "Acquired as a tier reward from the Shipwreck Strand Mastery achievement."
-      },
-      {
-        "bitIndex": 3,
-        "itemId": 106206,
-        "name": "Relic of the Mist Stranger",
-        "icon": "https://render.guildwars2.com/file/2DA75566B948AADFAB0CCF2198F205AF9AE82031/3709381.png",
-        "chatLink": "[&AgHengEA]",
-        "description": "Siphon health whenever you hit a foe.",
-        "requirementText": "Acquired as a tier reward from the Starlit Weald Mastery achievement."
-      },
-      {
-        "bitIndex": 4,
-        "itemId": 106364,
-        "name": "Relic of the Biomancer",
-        "icon": "https://render.guildwars2.com/file/5CF5F504B24F210BE209053D2134B89072FC4F29/3709378.png",
-        "chatLink": "[&AgF8nwEA]",
-        "description": "Heal yourself when you inflict bleeding or poison on a foe.",
-        "requirementText": "Acquired from completing the Hammerhart Rumble! world boss event in Shipwreck Strand."
-      },
-      {
-        "bitIndex": 5,
-        "itemId": 105652,
-        "name": "Relic of Castora",
-        "icon": "https://render.guildwars2.com/file/349EA123E7D870C4199AB268250973FAEC0ADC94/3709379.png",
-        "chatLink": "[&AgG0nAEA]",
-        "description": "Healing to other allies is increased while they are below the health threshold.",
-        "requirementText": "Acquired from completing the Secrets of the Weald meta-event in Starlit Weald."
-      }
-    ]
-  },
-  {
-    "id": 8446,
-    "name": "Relics—Janthir Wilds Set 2",
-    "expansion": "Janthir Wilds",
-    "defaultUnlocked": false,
-    "bitsCount": 6,
-    "bits": [
-      {
-        "bitIndex": 0,
-        "itemId": 104022,
-        "name": "Relic of the Steamshrieker",
-        "icon": "https://render.guildwars2.com/file/23B0F0A5BF05E05C9F527BF7EB4962C9F49C6F42/3441975.png",
-        "chatLink": "[&AgFWlgEA]",
-        "description": "Burn nearby enemies when you successfully combo a water field with a blast or leap finisher.",
-        "requirementText": "Complete the Janthir Wilds: Godspawn Mastery achievement."
-      },
-      {
-        "bitIndex": 1,
-        "itemId": 103872,
-        "name": "Relic of Mount Balrior",
-        "icon": "https://render.guildwars2.com/file/49A8520BDB6C5A7BA90832DB9406677473A6932F/3441973.png",
-        "chatLink": "[&AgHAlQEA]",
-        "description": "After using an elite skill, create an area underneath yourself. Standing in this area increases your outgoing strike damage.",
-        "requirementText": "Tier reward from the Mount Balrior: Convergence Conqueror achievement."
-      },
-      {
-        "bitIndex": 2,
-        "itemId": 103763,
-        "name": "Relic of Geysers",
-        "icon": "https://render.guildwars2.com/file/CEDCA7097F41AD0715322E440ABDCE1E6FF49178/3441971.png",
-        "chatLink": "[&AgFTlQEA]",
-        "description": "Restore endurance to allies when you grant them vigor.",
-        "requirementText": "Purchased from unusual coin vendors in Lowland Shore and Janthir Syntri."
-      },
-      {
-        "bitIndex": 3,
-        "itemId": 103901,
-        "name": "Relic of the Mists Tide",
-        "icon": "https://render.guildwars2.com/file/2ADA1A4509057D7B3854EEE9149A0F45CCD0EAA2/3441972.png",
-        "chatLink": "[&AgHdlQEA]",
-        "description": "Cleanse a condition from yourself when you successfully combo a field with a leap or blast finisher.",
-        "requirementText": "You can purchase this from a renown heart vendor in Festering Basin in Janthir Syntri."
-      },
-      {
-        "bitIndex": 4,
-        "itemId": 103977,
-        "name": "Relic of the Beehive",
-        "icon": "https://render.guildwars2.com/file/0D45B8A4A1D8D7FF4BAE196091C76A961D3F9621/3441970.png",
-        "chatLink": "[&AgEplgEA]",
-        "description": "After using an elite skill, release a wave of pheromones that causes bees to swarm enemies struck.",
-        "requirementText": "You can purchase this from a renown heart vendor in Coursing Upland in Lowland Shore."
-      },
-      {
-        "bitIndex": 5,
-        "itemId": 103984,
-        "name": "Relic of Reunification",
-        "icon": "https://render.guildwars2.com/file/DDC5C072A8E0566CFFF1200404E529DADCD27CF3/3441974.png",
-        "chatLink": "[&AgEwlgEA]",
-        "description": "Gain frost aura and light aura after using a healing skill.",
-        "requirementText": "You can purchase this from Deft Lahar in Hearth's Glow."
-      }
-    ]
-  }
+	{
+		"id": 9266,
+		"name": "Relics—Visions of Eternity Set 3",
+		"expansion": "Visions of Eternity",
+		"defaultUnlocked": false,
+		"bitsCount": 6,
+		"bits": [
+			{
+				"bitIndex": 0,
+				"itemId": 109664,
+				"name": "Relic of the Cruel Overseer",
+				"icon": "https://render.guildwars2.com/file/AECE9B16DE04F756C501743BA863B00A377CE70B/3770710.png",
+				"chatLink": "[&AgFgrAEA]",
+				"description": "Gain stacks of Kuda's Cruelty when you inflict damaging conditions. After reaching the maximum number of stacks, convert outgoing condition damage into healing for a short period of time.",
+				"requirementText": "Acquired as a reward by completing the Visions of Eternity: The Only Way Mastery achievement."
+			},
+			{
+				"bitIndex": 1,
+				"itemId": 109351,
+				"name": "Relic of the Director",
+				"icon": "https://render.guildwars2.com/file/6FD76BA11105EC67451D9E7E1DE938C91DB3AD68/3770711.png",
+				"chatLink": "[&AgEnqwEA]",
+				"description": "Inflict vulnerability on nearby enemies when you use a healing skill. For a short period of time, you deal increased damage to vulnerable foes.",
+				"requirementText": "Acquired as a reward by completing the So It Is Written achievement."
+			},
+			{
+				"bitIndex": 2,
+				"itemId": 109522,
+				"name": "Relic of the Doyen",
+				"icon": "https://render.guildwars2.com/file/EF797D16D0D211064031129135C864311856CDB1/3770712.png",
+				"chatLink": "[&AgHSqwEA]",
+				"description": "Take reduced incoming strike damage while you have resolution. <c=@reminder>This does not stack with other sources of the same effect.</c>",
+				"requirementText": "Acquired as a reward by completing the Castoran Curse-Breaker achievement."
+			},
+			{
+				"bitIndex": 3,
+				"itemId": 109264,
+				"name": "Relic of Galdra",
+				"icon": "https://render.guildwars2.com/file/CE07976D4420779EC0082AFE06B73F3AA6AE2348/3770713.png",
+				"chatLink": "[&AgHQqgEA]",
+				"description": "When you use an elite skill, launch projectiles that inflict burning at nearby foes.",
+				"requirementText": "Acquired as a reward by completing the Eternal Watch achievement."
+			},
+			{
+				"bitIndex": 4,
+				"itemId": 109267,
+				"name": "Relic of the Sacred Grounds",
+				"icon": "https://render.guildwars2.com/file/A3C6C20BE0A1299F05EB5C713558A86D9AA7C176/3770714.png",
+				"chatLink": "[&AgHTqgEA]",
+				"description": "Gain protection when you use a <c=@abilitytype>well</c> or <c=@abilitytype>consecration</c> skill.",
+				"requirementText": "Acquired as a tier reward from the Eternity's Garden Mastery achievement."
+			},
+			{
+				"bitIndex": 5,
+				"itemId": 109709,
+				"name": "Relic of Watch",
+				"icon": "https://render.guildwars2.com/file/33D70B101ECFFD0C42205877E5BFE20EC461C19C/3770715.png",
+				"chatLink": "[&AgGNrAEA]",
+				"description": "Immobilization you inflict lasts longer. Weaken foes when you immobilize them.",
+				"requirementText": "Acquired as a reward by completing the Eternity's Garden Explorer achievement."
+			}
+		]
+	},
+	{
+		"id": 8363,
+		"name": "Relics—Janthir Wilds Set 1",
+		"expansion": "Janthir Wilds",
+		"defaultUnlocked": false,
+		"bitsCount": 6,
+		"bits": [
+			{
+				"bitIndex": 0,
+				"itemId": 102245,
+				"name": "Relic of Atrocity",
+				"icon": "https://render.guildwars2.com/file/F1F3033EA7780C093A651253ACB92E415C0525F6/3375218.png",
+				"chatLink": "[&AgFljwEA]",
+				"description": "Your lifesteal damage and healing is increased.",
+				"requirementText": "Acquired as a tier reward from the Janthir Wilds: Act 2 Mastery achievement."
+			},
+			{
+				"bitIndex": 1,
+				"itemId": 103574,
+				"name": "Relic of the Claw",
+				"icon": "https://render.guildwars2.com/file/19B5DB56E495C70754A8BE3621CADC0FD7402845/3375220.png",
+				"chatLink": "[&AgGWlAEA]",
+				"description": "Deal increased strike damage for a duration after you disable a foe.",
+				"requirementText": "Acquired as a tier reward from the Lowland Shore Mastery achievement."
+			},
+			{
+				"bitIndex": 2,
+				"itemId": 102595,
+				"name": "Relic of the Stormsinger",
+				"icon": "https://render.guildwars2.com/file/53B8A123D07CC679364EF4CF4BD7537624320919/3375223.png",
+				"chatLink": "[&AgHDkAEA]",
+				"description": "After using a movement skill, your next attack creates an arc of chain lightning that strikes nearby enemies.",
+				"requirementText": "Purchased from a Renown Heart vendor in Echoing Hills, located in Janthir Syntri."
+			},
+			{
+				"bitIndex": 3,
+				"itemId": 102199,
+				"name": "Relic of the Blightbringer",
+				"icon": "https://render.guildwars2.com/file/286C60AC6FA239B0070293039091A44476A35E90/3375219.png",
+				"chatLink": "[&AgE3jwEA]",
+				"description": "Gain stacks of Greer's Virulence when you inflict poison on a foe. After reaching the maximum number of stacks, the next time you inflict poison also inflicts additional conditions on nearby enemies.",
+				"requirementText": "Acquired as a tier reward from the Janthir Syntri Mastery achievement."
+			},
+			{
+				"bitIndex": 4,
+				"itemId": 103015,
+				"name": "Relic of Rivers",
+				"icon": "https://render.guildwars2.com/file/4C054AF70F0CE14E46B159686F1AA70A320A1E07/3375221.png",
+				"chatLink": "[&AgFnkgEA]",
+				"description": "Gain alacrity and regeneration at the end of your dodge roll.",
+				"requirementText": "Purchased from a renown heart vendor in Harvest Den, located in Lowland Shore."
+			},
+			{
+				"bitIndex": 5,
+				"itemId": 103424,
+				"name": "Relic of Sorrow",
+				"icon": "https://render.guildwars2.com/file/F943C04CD27C463AB167FDF49F9CCC3E27F0AD18/3375222.png",
+				"chatLink": "[&AgEAlAEA]",
+				"description": "After using an elite skill, create an area that protects allies and destroys enemy projectiles.",
+				"requirementText": "Acquired as a tier reward from the Janthir Wilds: Act 1 Mastery achievement."
+			}
+		]
+	},
+	{
+		"id": 8725,
+		"name": "Relics—Janthir Wilds Set 3",
+		"expansion": "Janthir Wilds",
+		"defaultUnlocked": false,
+		"bitsCount": 6,
+		"bits": [
+			{
+				"bitIndex": 0,
+				"itemId": 104849,
+				"name": "Relic of Agony",
+				"icon": "https://render.guildwars2.com/file/7060CF69EFEB7A99150F2F1A7E0E1F1D2D9ED0D2/3629395.png",
+				"chatLink": "[&AgGRmQEA]",
+				"description": "Enemies you interrupt are inflicted with Agony of the Choir.<br><c=@reminder>This trait can only affect enemies with defiance bars once per interval.</c>",
+				"requirementText": "Acquire this relic from the Bava Nisos Rift Hunting achievement or from the Janthir Wilds reward track."
+			},
+			{
+				"bitIndex": 1,
+				"itemId": 104848,
+				"name": "Relic of Bava Nisos",
+				"icon": "https://render.guildwars2.com/file/213C437140552326BD633D1AFF150B48DF2EB544/3629396.png",
+				"chatLink": "[&AgGQmQEA]",
+				"description": "Upon using a <c=@abilitytype>stance</c> skill, cleanse conditions from yourself.",
+				"requirementText": "Acquire this relic from the Bava Nisos Mastery achievement or from the Janthir Wilds reward track."
+			},
+			{
+				"bitIndex": 2,
+				"itemId": 104800,
+				"name": "Relic of Bloodstone",
+				"icon": "https://render.guildwars2.com/file/A7327A7EDB4705EA05261110526D72AFEAF7DAB4/3629397.png",
+				"chatLink": "[&AgFgmQEA]",
+				"description": "Gain Bloodstone Volatility when you successfully combo a field with a blast finisher. Blasting at the stack threshold triggers an explosion, granting increased damage.",
+				"requirementText": "Acquire this relic by completing the Convergence Challenge Mode—Greer: Silver achievement or from the Janthir Wilds reward track."
+			},
+			{
+				"bitIndex": 3,
+				"itemId": 104938,
+				"name": "Relic of the Living City",
+				"icon": "https://render.guildwars2.com/file/6CAF0358FBD9DDD84AB3302E2D67329A3AA83DEC/3629398.png",
+				"chatLink": "[&AgHqmQEA]",
+				"description": "Complete each trigger once to gain stacks of Titanic Potential:\n• Use a healing skill\n• Use an elite skill\n• Finish a combo field\n• Disable an enemy\n• Evade an attack\nAt 5 stacks, gain Soul of the Titan, providing increased attributes and all boons for its duration.",
+				"requirementText": "Acquire this relic from the Bava Nisos Explorer achievement or from the Janthir Wilds reward track."
+			},
+			{
+				"bitIndex": 4,
+				"itemId": 104994,
+				"name": "Relic of Mistburn",
+				"icon": "https://render.guildwars2.com/file/FFCB62CF19806066D21C0EA1BA43986C0DA2B6F3/3629399.png",
+				"chatLink": "[&AgEimgEA]",
+				"description": "When you grant might to yourself, grant yourself additional might. Gain increased critical-strike chance while at or above the might threshold.",
+				"requirementText": "Acquire this relic by completing the Convergence Challenge Mode—Ura: Silver Achievement or from the Janthir Wilds reward track."
+			},
+			{
+				"bitIndex": 5,
+				"itemId": 104733,
+				"name": "Relic of the Phenom",
+				"icon": "https://render.guildwars2.com/file/AD0AE5035A197220507642E1169ED55E0C58A29D/3629400.png",
+				"chatLink": "[&AgEdmQEA]",
+				"description": "Upon using a <c=@abilitytype>cantrip</c> or <c=@abilitytype>meditation</c> skill, gain protection.",
+				"requirementText": "Acquire this relic by completing the Convergence Challenge Mode—Decima: Silver achievement or from the Janthir Wilds reward track."
+			}
+		]
+	},
+	{
+		"id": 9101,
+		"name": "Relics—Visions of Eternity Set 2",
+		"expansion": "Visions of Eternity",
+		"defaultUnlocked": false,
+		"bitsCount": 6,
+		"bits": [
+			{
+				"bitIndex": 0,
+				"itemId": 107192,
+				"name": "Relic of the Alliance",
+				"icon": "https://render.guildwars2.com/file/406F52FEEF9CC64AF45CA27C4A240A6E0E5443A2/3745064.png",
+				"chatLink": "[&AgG4ogEA]",
+				"description": "Using a signet skill reduces the recharge of all signet skills.",
+				"requirementText": "Unlock this relic by buying the relic from a Visions of Eternity relic vendor or by progressing the Raid Quickplay Frequenter achievement or a Visions of Eternity reward track."
+			},
+			{
+				"bitIndex": 1,
+				"itemId": 107061,
+				"name": "Relic of the Coral Heart",
+				"icon": "https://render.guildwars2.com/file/5DD9D2052B2C3EF921EBE6E243580CE3A1011B2F/3745065.png",
+				"chatLink": "[&AgE1ogEA]",
+				"description": "After using a healing skill, temporarily deal damage to nearby enemies when struck.",
+				"requirementText": "Unlock this relic by buying the relic from a Visions of Eternity relic vendor or by progressing the Raid Quickplay Frequenter achievement or a Visions of Eternity reward track."
+			},
+			{
+				"bitIndex": 2,
+				"itemId": 107030,
+				"name": "Relic of Fog",
+				"icon": "https://render.guildwars2.com/file/F31809ABA515534B10E7D8B90DDC513DD311A5D6/3745066.png",
+				"chatLink": "[&AgEWogEA]",
+				"description": "After dodge rolling in combat, the next incoming strike will always be a glancing blow.",
+				"requirementText": "Unlock this relic by buying the relic from a Visions of Eternity relic vendor or by progressing the Raid Quickplay Frequenter achievement or a Visions of Eternity reward track."
+			},
+			{
+				"bitIndex": 3,
+				"itemId": 107124,
+				"name": "Relic of the Forest Dweller",
+				"icon": "https://render.guildwars2.com/file/DC19DA3EC27F49593B93F9042264F5DD36FED4ED/3745067.png",
+				"chatLink": "[&AgF0ogEA]",
+				"description": "After using an elite skill, launch bubbles at nearby enemies. Enemies struck by the bubbles become trapped and float for a short period of time.",
+				"requirementText": "Unlock this relic by buying the relic from a Visions of Eternity relic vendor or by progressing the Raid Quickplay Frequenter achievement or a Visions of Eternity reward track."
+			},
+			{
+				"bitIndex": 4,
+				"itemId": 106920,
+				"name": "Relic of the Nautical Beast",
+				"icon": "https://render.guildwars2.com/file/0EE97FA7FB5DC098447AAF6401DF5A09C47B33AD/3745068.png",
+				"chatLink": "[&AgGooQEA]",
+				"description": "Create a tidal wave that damages enemies and heals allies when you successfully combo a water field with a leap finisher.",
+				"requirementText": "Unlock this relic by buying the relic from a Visions of Eternity relic vendor or by progressing the Raid Quickplay Frequenter achievement or a Visions of Eternity reward track."
+			},
+			{
+				"bitIndex": 5,
+				"itemId": 106916,
+				"name": "Relic of Shackles",
+				"icon": "https://render.guildwars2.com/file/7946A50DBDC2E45E004AAA801904015C50CC22B3/3745069.png",
+				"chatLink": "[&AgGkoQEA]",
+				"description": "Tether yourself to enemies when you immobilize them. Deal damage to enemies that are still in range of the tether when it expires. <c=@reminder>Each enemy can only be tethered once per interval.</c>",
+				"requirementText": "Unlock this relic by buying the relic from a Visions of Eternity relic vendor or by progressing the Raid Quickplay Frequenter achievement or a Visions of Eternity reward track."
+			}
+		]
+	},
+	{
+		"id": 8959,
+		"name": "Relics—Visions of Eternity Set 1",
+		"expansion": "Visions of Eternity",
+		"defaultUnlocked": false,
+		"bitsCount": 6,
+		"bits": [
+			{
+				"bitIndex": 0,
+				"itemId": 106355,
+				"name": "Relic of the Scoundrel",
+				"icon": "https://render.guildwars2.com/file/0B58A2B6F00D9657EE141001A8AA240DDBDE300D/3709383.png",
+				"chatLink": "[&AgFznwEA]",
+				"description": "Gain increased critical-hit chance for a duration after inflicting blindness or weakness.",
+				"requirementText": "Acquired as a tier reward from the Visions of Eternity: Act 1 Mastery achievement."
+			},
+			{
+				"bitIndex": 1,
+				"itemId": 105585,
+				"name": "Relic of the First Revenant",
+				"icon": "https://render.guildwars2.com/file/7DA30BCFB0E0A04A5D3DFE3D25DAF142D90E1596/3709380.png",
+				"chatLink": "[&AgFxnAEA]",
+				"description": "Gain incoming condition damage reduction while you have resistance.",
+				"requirementText": "Acquired as a tier reward from the Visions of Eternity: Act 2 Mastery achievement."
+			},
+			{
+				"bitIndex": 2,
+				"itemId": 106221,
+				"name": "Relic of the Pirate Queen",
+				"icon": "https://render.guildwars2.com/file/6C7D53936BFC0DFD52BACDD9A2C7F0909E424F0D/3709382.png",
+				"chatLink": "[&AgHtngEA]",
+				"description": "Gain quickness when you disable a foe.",
+				"requirementText": "Acquired as a tier reward from the Shipwreck Strand Mastery achievement."
+			},
+			{
+				"bitIndex": 3,
+				"itemId": 106206,
+				"name": "Relic of the Mist Stranger",
+				"icon": "https://render.guildwars2.com/file/2DA75566B948AADFAB0CCF2198F205AF9AE82031/3709381.png",
+				"chatLink": "[&AgHengEA]",
+				"description": "Siphon health whenever you hit a foe.",
+				"requirementText": "Acquired as a tier reward from the Starlit Weald Mastery achievement."
+			},
+			{
+				"bitIndex": 4,
+				"itemId": 106364,
+				"name": "Relic of the Biomancer",
+				"icon": "https://render.guildwars2.com/file/5CF5F504B24F210BE209053D2134B89072FC4F29/3709378.png",
+				"chatLink": "[&AgF8nwEA]",
+				"description": "Heal yourself when you inflict bleeding or poison on a foe.",
+				"requirementText": "Acquired from completing the Hammerhart Rumble! world boss event in Shipwreck Strand."
+			},
+			{
+				"bitIndex": 5,
+				"itemId": 105652,
+				"name": "Relic of Castora",
+				"icon": "https://render.guildwars2.com/file/349EA123E7D870C4199AB268250973FAEC0ADC94/3709379.png",
+				"chatLink": "[&AgG0nAEA]",
+				"description": "Healing to other allies is increased while they are below the health threshold.",
+				"requirementText": "Acquired from completing the Secrets of the Weald meta-event in Starlit Weald."
+			}
+		]
+	},
+	{
+		"id": 8446,
+		"name": "Relics—Janthir Wilds Set 2",
+		"expansion": "Janthir Wilds",
+		"defaultUnlocked": false,
+		"bitsCount": 6,
+		"bits": [
+			{
+				"bitIndex": 0,
+				"itemId": 104022,
+				"name": "Relic of the Steamshrieker",
+				"icon": "https://render.guildwars2.com/file/23B0F0A5BF05E05C9F527BF7EB4962C9F49C6F42/3441975.png",
+				"chatLink": "[&AgFWlgEA]",
+				"description": "Burn nearby enemies when you successfully combo a water field with a blast or leap finisher.",
+				"requirementText": "Complete the Janthir Wilds: Godspawn Mastery achievement."
+			},
+			{
+				"bitIndex": 1,
+				"itemId": 103872,
+				"name": "Relic of Mount Balrior",
+				"icon": "https://render.guildwars2.com/file/49A8520BDB6C5A7BA90832DB9406677473A6932F/3441973.png",
+				"chatLink": "[&AgHAlQEA]",
+				"description": "After using an elite skill, create an area underneath yourself. Standing in this area increases your outgoing strike damage.",
+				"requirementText": "Tier reward from the Mount Balrior: Convergence Conqueror achievement."
+			},
+			{
+				"bitIndex": 2,
+				"itemId": 103763,
+				"name": "Relic of Geysers",
+				"icon": "https://render.guildwars2.com/file/CEDCA7097F41AD0715322E440ABDCE1E6FF49178/3441971.png",
+				"chatLink": "[&AgFTlQEA]",
+				"description": "Restore endurance to allies when you grant them vigor.",
+				"requirementText": "Purchased from unusual coin vendors in Lowland Shore and Janthir Syntri."
+			},
+			{
+				"bitIndex": 3,
+				"itemId": 103901,
+				"name": "Relic of the Mists Tide",
+				"icon": "https://render.guildwars2.com/file/2ADA1A4509057D7B3854EEE9149A0F45CCD0EAA2/3441972.png",
+				"chatLink": "[&AgHdlQEA]",
+				"description": "Cleanse a condition from yourself when you successfully combo a field with a leap or blast finisher.",
+				"requirementText": "You can purchase this from a renown heart vendor in Festering Basin in Janthir Syntri."
+			},
+			{
+				"bitIndex": 4,
+				"itemId": 103977,
+				"name": "Relic of the Beehive",
+				"icon": "https://render.guildwars2.com/file/0D45B8A4A1D8D7FF4BAE196091C76A961D3F9621/3441970.png",
+				"chatLink": "[&AgEplgEA]",
+				"description": "After using an elite skill, release a wave of pheromones that causes bees to swarm enemies struck.",
+				"requirementText": "You can purchase this from a renown heart vendor in Coursing Upland in Lowland Shore."
+			},
+			{
+				"bitIndex": 5,
+				"itemId": 103984,
+				"name": "Relic of Reunification",
+				"icon": "https://render.guildwars2.com/file/DDC5C072A8E0566CFFF1200404E529DADCD27CF3/3441974.png",
+				"chatLink": "[&AgEwlgEA]",
+				"description": "Gain frost aura and light aura after using a healing skill.",
+				"requirementText": "You can purchase this from Deft Lahar in Hearth's Glow."
+			}
+		]
+	}
 ]

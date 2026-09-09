@@ -17,6 +17,10 @@
 	const getIcon = (id: number) => `https://render.guildwars2.com/file/...`;
 </script>
 
+<svelte:head>
+	<title>Account Wallet | GW TODOBOX</title>
+</svelte:head>
+
 <div class="rounded-xl border border-slate-700 bg-slate-900 p-6 shadow-xl">
 	<div class="mb-6 flex flex-col items-start justify-between gap-4 md:flex-row md:items-center">
 		<div>

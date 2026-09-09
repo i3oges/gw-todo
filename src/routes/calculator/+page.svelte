@@ -47,6 +47,10 @@
 	const result = $derived(calculateRecipe());
 </script>
 
+<svelte:head>
+	<title>Crafting Calculator | GW TODOBOX</title>
+</svelte:head>
+
 <div class="space-y-8">
 	<header>
 		<h1 class="text-3xl font-bold text-white">Crafting Calculator</h1>

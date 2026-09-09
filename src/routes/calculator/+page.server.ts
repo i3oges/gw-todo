@@ -1,4 +1,9 @@
-import { getItemDetails, getItemPrices, getRecipes, searchRecipesByOutput } from '$lib/server/Gw2Api';
+import {
+	getItemDetails,
+	getItemPrices,
+	getRecipes,
+	searchRecipesByOutput
+} from '$lib/server/Gw2Api';
 import type { PageServerLoad, Actions } from './$types';
 
 export const load: PageServerLoad = async ({ url }) => {

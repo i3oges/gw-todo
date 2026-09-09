@@ -14,6 +14,10 @@
 	}
 </script>
 
+<svelte:head>
+	<title>Roller Beetle Races | GW TODOBOX</title>
+</svelte:head>
+
 <div class="mb-6 flex gap-2 border-b border-slate-700 pb-3">
 	<a
 		href="/races"
@@ -37,7 +41,9 @@
 					<span class="text-yellow-500">🏁</span> Guild Wars 2 Roller Beetle Races
 				</h1>
 				<p class="text-sm text-slate-400">
-					Track your completed roller beetle races <span class="text-xs text-amber-400/90 font-medium">(Resets daily at 00:00 UTC)</span>
+					Track your completed roller beetle races <span
+						class="text-xs font-medium text-amber-400/90">(Resets daily at 00:00 UTC)</span
+					>
 				</p>
 				<p class="text-sm text-slate-400">
 					TIP: use <a

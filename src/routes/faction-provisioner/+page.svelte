@@ -177,6 +177,10 @@
 	);
 </script>
 
+<svelte:head>
+	<title>Faction Provisioner | GW TODOBOX</title>
+</svelte:head>
+
 <div
 	class="mx-auto flex max-w-7xl flex-col gap-2 rounded-xl border border-slate-700 bg-slate-900 p-6 text-slate-100 shadow-2xl"
 >

@@ -3,6 +3,10 @@
 	import Card from '$lib/Card.svelte';
 </script>
 
+<svelte:head>
+	<title>GW TODOBOX | Guild Wars 2 Daily Routine & Tools</title>
+</svelte:head>
+
 <div class="flex flex-col items-center justify-center space-y-8 py-12 text-center">
 	<div class="space-y-4">
 		<h1 class="text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
@@ -40,7 +44,12 @@
 			<span slot="description">
 				Track your completed roller beetle time trials and courses across Tyria.
 			</span>
-			<Button slot="action" variant="secondary" href="/races/roller-beetle" class="w-full text-center">
+			<Button
+				slot="action"
+				variant="secondary"
+				href="/races/roller-beetle"
+				class="w-full text-center"
+			>
 				View Checklist
 			</Button>
 		</Card>
