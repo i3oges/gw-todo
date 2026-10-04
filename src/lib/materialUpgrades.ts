@@ -392,3 +392,73 @@ export const ORB_REFINEMENT: MysticForgeRecipeList = {
 		}
 	]
 };
+
+const DESTROYER_LODESTONE_ID = 24325;
+const CRYSTAL_LODESTONE_ID = 24330;
+const CORRUPTED_LODESTONE_ID = 24340;
+const MORDREM_LODESTONE_ID = 70842;
+const PILE_OF_PUTRID_ESSENCE_ID = 24335;
+const AMALGAMATED_DRACONIC_LODESTONE_ID = 92687;
+
+export const AMALGAMATED_DRACONIC_LODESTONES: MysticForgeRecipeList = {
+	name: 'Amalgamated Draconic Lodestone',
+	recipes: [
+		{
+			id: 'amalgamated-draconic-lodestone-mordrem-1',
+			name: 'Amalgamated Draconic Lodestone (Mordrem x10)',
+			ingredient1: DESTROYER_LODESTONE_ID,
+			ingredient1Count: 10,
+			ingredient2: CRYSTAL_LODESTONE_ID,
+			ingredient2Count: 10,
+			ingredient3: CORRUPTED_LODESTONE_ID,
+			ingredient3Count: 10,
+			ingredient4: MORDREM_LODESTONE_ID,
+			ingredient4Count: 10,
+			output: AMALGAMATED_DRACONIC_LODESTONE_ID,
+			outputCount: 1
+		},
+		{
+			id: 'amalgamated-draconic-lodestone-putrid-1',
+			name: 'Amalgamated Draconic Lodestone (Putrid Essence x10)',
+			ingredient1: DESTROYER_LODESTONE_ID,
+			ingredient1Count: 10,
+			ingredient2: CRYSTAL_LODESTONE_ID,
+			ingredient2Count: 10,
+			ingredient3: CORRUPTED_LODESTONE_ID,
+			ingredient3Count: 10,
+			ingredient4: PILE_OF_PUTRID_ESSENCE_ID,
+			ingredient4Count: 10,
+			output: AMALGAMATED_DRACONIC_LODESTONE_ID,
+			outputCount: 1
+		},
+		{
+			id: 'amalgamated-draconic-lodestone-mordrem-25',
+			name: 'Amalgamated Draconic Lodestone x25 (Mordrem x250)',
+			ingredient1: DESTROYER_LODESTONE_ID,
+			ingredient1Count: 250,
+			ingredient2: CRYSTAL_LODESTONE_ID,
+			ingredient2Count: 250,
+			ingredient3: CORRUPTED_LODESTONE_ID,
+			ingredient3Count: 250,
+			ingredient4: MORDREM_LODESTONE_ID,
+			ingredient4Count: 250,
+			output: AMALGAMATED_DRACONIC_LODESTONE_ID,
+			outputCount: 25
+		},
+		{
+			id: 'amalgamated-draconic-lodestone-putrid-25',
+			name: 'Amalgamated Draconic Lodestone x25 (Putrid Essence x250)',
+			ingredient1: DESTROYER_LODESTONE_ID,
+			ingredient1Count: 250,
+			ingredient2: CRYSTAL_LODESTONE_ID,
+			ingredient2Count: 250,
+			ingredient3: CORRUPTED_LODESTONE_ID,
+			ingredient3Count: 250,
+			ingredient4: PILE_OF_PUTRID_ESSENCE_ID,
+			ingredient4Count: 250,
+			output: AMALGAMATED_DRACONIC_LODESTONE_ID,
+			outputCount: 25
+		}
+	]
+};
+

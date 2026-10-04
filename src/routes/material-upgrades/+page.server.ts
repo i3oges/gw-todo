@@ -3,16 +3,17 @@ import {
 	FINE_MATERIAL_UPGRADES_T5_TO_T6,
 	ORB_REFINEMENT,
 	RARE_MATERIAL_UPGRADES_T4_TO_T5,
-	RARE_MATERIAL_UPGRADES_T5_TO_T6
+	RARE_MATERIAL_UPGRADES_T5_TO_T6,
+	AMALGAMATED_DRACONIC_LODESTONES
 } from '$lib/materialUpgrades';
+import { ALL_MATERIAL_PROMOTIONS } from '$lib/materialPromotions';
 import type { PageServerLoad } from './$types';
 
 export const load: PageServerLoad = async () => {
 	const recipes = [
-		FINE_MATERIAL_UPGRADES_T5_TO_T6,
-		RARE_MATERIAL_UPGRADES_T5_TO_T6,
-		RARE_MATERIAL_UPGRADES_T4_TO_T5,
-		ORB_REFINEMENT
+		...ALL_MATERIAL_PROMOTIONS,
+		ORB_REFINEMENT,
+		AMALGAMATED_DRACONIC_LODESTONES
 	];
 	const allUpgrades = recipes.map((r) => r.recipes).flat();
 

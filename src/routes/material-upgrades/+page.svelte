@@ -1,11 +1,48 @@
 <script lang="ts">
 	import GWCPrice from '$lib/GWCPrice.svelte';
+	import type { MysticForgeRecipe } from '$lib/materialUpgrades';
 	import type { PageProps } from './$types';
-	import type { MaterialUpgrade, MysticForgeRecipe } from '$lib/materialUpgrades';
 
 	let { data }: PageProps = $props();
 
 	const { recipes, priceMap, detailMap } = $derived(data);
+
+	let searchQuery = $state('');
+	let selectedCategory = $state('All');
+
+	const categories = $derived([
+		'All',
+		...Array.from(new Set(recipes.map((r) => r.name.split(':')[0].trim())))
+	]);
+
+	const filteredRecipes = $derived(
+		recipes
+			.filter((recipeList) => {
+				if (selectedCategory === 'All') return true;
+				return recipeList.name.startsWith(selectedCategory);
+			})
+			.map((recipeList) => {
+				if (!searchQuery.trim()) return recipeList;
+				const query = searchQuery.toLowerCase().trim();
+				const matching = recipeList.recipes.filter((upgrade) => {
+					const outItem = detailMap.get(upgrade.output);
+					if (outItem?.name.toLowerCase().includes(query)) return true;
+					if (upgrade.name.toLowerCase().includes(query)) return true;
+					const ingIds = [
+						upgrade.ingredient1,
+						upgrade.ingredient2,
+						upgrade.ingredient3,
+						upgrade.ingredient4
+					].filter((id): id is number => id !== undefined);
+					return ingIds.some((id) => detailMap.get(id)?.name.toLowerCase().includes(query));
+				});
+				return {
+					...recipeList,
+					recipes: matching
+				};
+			})
+			.filter((recipeList) => recipeList.recipes.length > 0)
+	);
 
 	const calculateUpgrade = (upgrade: MysticForgeRecipe) => {
 		const i1Price = priceMap.get(upgrade.ingredient1)?.sells.unit_price || 0;
@@ -18,11 +55,7 @@
 			{ id: upgrade.ingredient1, count: upgrade.ingredient1Count, unitPrice: i1Price },
 			{ id: upgrade.ingredient2, count: upgrade.ingredient2Count, unitPrice: i2Price }
 		];
-		if (
-			i3Price !== 0 &&
-			upgrade.ingredient3 !== undefined &&
-			upgrade.ingredient3Count !== undefined
-		) {
+		if (upgrade.ingredient3 !== undefined && upgrade.ingredient3Count !== undefined) {
 			ingredients.push({
 				id: upgrade.ingredient3,
 				count: upgrade.ingredient3Count,
@@ -30,11 +63,7 @@
 			});
 		}
 
-		if (
-			i4Price !== 0 &&
-			upgrade.ingredient4 !== undefined &&
-			upgrade.ingredient4Count !== undefined
-		) {
+		if (upgrade.ingredient4 !== undefined && upgrade.ingredient4Count !== undefined) {
 			ingredients.push({
 				id: upgrade.ingredient4,
 				count: upgrade.ingredient4Count,
@@ -62,10 +91,53 @@
 		</p>
 	</header>
 
-	{#each recipes as recipe}
+	<div class="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+		<!-- Category filter tabs -->
+		<div class="flex flex-wrap gap-1.5">
+			{#each categories as category}
+				<button
+					type="button"
+					onclick={() => (selectedCategory = category)}
+					class="rounded-lg px-3 py-1.5 text-xs font-medium transition-all {selectedCategory ===
+					category
+						? 'bg-amber-600 text-white shadow'
+						: 'bg-slate-800/80 text-slate-300 hover:bg-slate-700 hover:text-white'}"
+				>
+					{category}
+				</button>
+			{/each}
+		</div>
+
+		<!-- Search box -->
+		<div class="relative w-full md:w-64">
+			<input
+				type="text"
+				bind:value={searchQuery}
+				placeholder="Search materials..."
+				class="w-full rounded-lg border border-slate-700 bg-slate-800/80 px-3 py-1.5 text-xs text-white placeholder-slate-400 shadow-inner focus:border-amber-500 focus:ring-1 focus:ring-amber-500 focus:outline-none"
+			/>
+			{#if searchQuery}
+				<button
+					type="button"
+					onclick={() => (searchQuery = '')}
+					class="absolute top-1/2 right-2.5 -translate-y-1/2 text-xs text-slate-400 hover:text-white"
+				>
+					✕
+				</button>
+			{/if}
+		</div>
+	</div>
+
+	{#if filteredRecipes.length === 0}
+		<div class="rounded-xl border border-slate-700 bg-slate-800/50 p-8 text-center text-slate-400">
+			No material promotion recipes found matching "{searchQuery}".
+		</div>
+	{/if}
+
+	{#each filteredRecipes as recipe}
 		<div class="overflow-hidden rounded-xl border border-slate-700 bg-slate-800/50 shadow-2xl">
 			<div class="overflow-x-auto">
-				<h1 class="p-2 text-(--secondary-color)!">{recipe.name}</h1>
+				<h2 class="p-3 text-base font-semibold text-(--secondary-color)!">{recipe.name}</h2>
 				<table class="w-full text-left text-sm">
 					<thead
 						class="border-b border-slate-700 bg-slate-900/50 text-xs font-semibold tracking-wider text-slate-400 uppercase"

@@ -43,22 +43,42 @@ const fetchGw2 = async <T extends z.ZodType>(
 
 export const getItemPrices = async (ids: number[]) => {
 	if (ids.length === 0) return [];
-	return fetchGw2(
-		'/commerce/prices',
-		z.array(CommercePriceSchema),
-		undefined,
-		new URLSearchParams({ ids: ids.join(',') })
+	const chunkSize = 100;
+	const chunks: number[][] = [];
+	for (let i = 0; i < ids.length; i += chunkSize) {
+		chunks.push(ids.slice(i, i + chunkSize));
+	}
+	const results = await Promise.all(
+		chunks.map((chunk) =>
+			fetchGw2(
+				'/commerce/prices',
+				z.array(CommercePriceSchema),
+				undefined,
+				new URLSearchParams({ ids: chunk.join(',') })
+			).catch(() => [])
+		)
 	);
+	return results.flat();
 };
 
 export const getItemDetails = async (ids: number[]) => {
 	if (ids.length === 0) return [];
-	return fetchGw2(
-		'/items',
-		z.array(ItemSchema),
-		undefined,
-		new URLSearchParams({ ids: ids.join(',') })
+	const chunkSize = 100;
+	const chunks: number[][] = [];
+	for (let i = 0; i < ids.length; i += chunkSize) {
+		chunks.push(ids.slice(i, i + chunkSize));
+	}
+	const results = await Promise.all(
+		chunks.map((chunk) =>
+			fetchGw2(
+				'/items',
+				z.array(ItemSchema),
+				undefined,
+				new URLSearchParams({ ids: chunk.join(',') })
+			).catch(() => [])
+		)
 	);
+	return results.flat();
 };
 
 export const getRecipes = async (ids: number[]) => {
