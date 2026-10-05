@@ -7,6 +7,7 @@
 	let search = $state('');
 	let selectedExpansion = $state('All');
 	let selectedStatus = $state('All');
+	let selectedSort = $state<'chronological' | 'reverse'>('chronological');
 	let copiedId = $state<number | null>(null);
 
 	const expansions = ['All', 'Janthir Wilds', 'Visions of Eternity'];
@@ -65,7 +66,11 @@
 				entry.relics.push(relic);
 			}
 		}
-		return Array.from(map.values()).filter((group) => group.relics.length > 0);
+		const groups = Array.from(map.values()).filter((group) => group.relics.length > 0);
+		if (selectedSort === 'reverse') {
+			return groups.reverse();
+		}
+		return groups;
 	});
 
 	function copyChatLink(item: EvaluatedRelic) {
@@ -225,6 +230,18 @@
 					{#each statuses as status}
 						<option value={status}>{status}</option>
 					{/each}
+				</select>
+			</div>
+
+			<div class="flex items-center gap-2">
+				<label for="order-filter" class="text-xs font-medium text-slate-400">Order:</label>
+				<select
+					id="order-filter"
+					bind:value={selectedSort}
+					class="rounded-lg border border-slate-700 bg-slate-800 px-3 py-1.5 text-xs text-slate-200 outline-none focus:border-blue-500"
+				>
+					<option value="chronological">Oldest First (Release)</option>
+					<option value="reverse">Newest First (Release)</option>
 				</select>
 			</div>
 		</div>
